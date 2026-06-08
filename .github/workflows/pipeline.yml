@@ -1,0 +1,39 @@
+name: Job Search Pipeline
+
+on:
+  schedule:
+    # 3x daily Sun–Thu: 07:00, 13:00, 19:00 UTC
+    - cron: '0 7 * * 0-4'
+    - cron: '0 13 * * 0-4'
+    - cron: '0 19 * * 0-4'
+  workflow_dispatch:  # allow manual trigger
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run job search pipeline
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python run_pipeline.py
+
+      - name: Commit and push results
+        run: |
+          git config --global user.name "Job Search Bot"
+          git config --global user.email "bot@job-search.local"
+          git add scored_jobs.json docs/scored_jobs.json docs/index.html || true
+          git diff --cached --quiet || git commit -m "chore: pipeline run $(date -u '+%Y-%m-%d %H:%M') UTC"
+          git push || echo "Nothing to push"
