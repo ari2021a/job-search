@@ -65,5 +65,6 @@ English (C2), Hebrew (Native), Spanish (B2), Russian (B2-C1)
 
 ## Weak Fit Signals
 - On-site only (score 0)
+- Traval (score 0)
 - Junior or IC-only roles
 - Non-B2B industries
