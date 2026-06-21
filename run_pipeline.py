@@ -50,7 +50,7 @@ def job_id(job):
 
 def load_jobs():
     if JOBS_FILE.exists():
-         data = json.loads(JOBS_FILE.read_text())
+        data = json.loads(JOBS_FILE.read_text())
         return data if isinstance(data, dict) else {}
     return {}
 
