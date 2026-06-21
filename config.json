@@ -3,34 +3,45 @@
     "name": "Aaron (Eric) Barrari",
     "email": "jobseric2@gmail.com",
     "phone": "+34-613-476-483",
-    "location": "Spain (WFH)"
+    "location": "Spain (WFH)",
+    "linkedin": "Eric Aaron Barrari",
+    "languages": ["English (C2)", "Hebrew (Native)", "Spanish (B2)", "Russian (B2-C1)"]
   },
   "search": {
     "roles": [
+      "Business Operations Manager",
+      "Director of Business Operations",
+      "VP Business Operations",
+      "Operational Excellence Manager",
+      "Head of Operational Excellence",
+      "Director of Operational Excellence",
+      "Change Management Lead",
+      "Director of Change Management",
       "Revenue Operations Manager",
       "Head of Revenue Operations",
       "VP Revenue Operations",
       "Director of Sales Operations",
-      "Head of Sales",
-      "VP of Sales",
-      "Director of Partnerships",
-      "Head of Business Development",
+      "Director of Business Development",
       "VP Business Development",
+      "Head of Business Development",
       "Head of Customer Success",
-      "Director of Operations",
-      "VP Operations",
-      "Chief Revenue Officer",
+      "Director of Customer Success",
       "Chief Operating Officer",
+      "Chief Revenue Officer",
       "GTM Strategy Lead",
-      "Commercial Director"
+      "Commercial Director",
+      "Director of Operations"
     ],
-    "industries": ["FinTech", "SaaS", "Payments", "B2B Software"],
-    "locations": ["Remote", "Remote EMEA", "Remote EU", "Europe"],
-    "location_keywords": ["remote", "emea", "europe", "wfh", "worldwide"],
+    "industries": ["FinTech", "SaaS", "Payments", "B2B Software", "Technology"],
+    "locations": ["Remote", "Remote EMEA", "Remote EU", "Remote Worldwide", "Remote Spain"],
+    "location_keywords": ["remote", "emea", "europe", "wfh", "worldwide", "spain"],
+    "exclude_keywords": ["travel required", "frequent travel", "on-site", "in-office", "relocation required", "closed", "expired"],
     "max_days_old": 30,
     "min_score": 4
   },
   "pipeline": {
+    "jobs_per_run": 15,
+    "ats_sources": ["greenhouse", "lever", "ashby"],
     "output_file": "scored_jobs.json",
     "docs_dir": "docs"
   }
