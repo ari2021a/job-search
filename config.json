@@ -1,0 +1,37 @@
+{
+  "profile": {
+    "name": "Aaron (Eric) Barrari",
+    "email": "jobseric2@gmail.com",
+    "phone": "+34-613-476-483",
+    "location": "Spain (WFH)"
+  },
+  "search": {
+    "roles": [
+      "Revenue Operations Manager",
+      "Head of Revenue Operations",
+      "VP Revenue Operations",
+      "Director of Sales Operations",
+      "Head of Sales",
+      "VP of Sales",
+      "Director of Partnerships",
+      "Head of Business Development",
+      "VP Business Development",
+      "Head of Customer Success",
+      "Director of Operations",
+      "VP Operations",
+      "Chief Revenue Officer",
+      "Chief Operating Officer",
+      "GTM Strategy Lead",
+      "Commercial Director"
+    ],
+    "industries": ["FinTech", "SaaS", "Payments", "B2B Software"],
+    "locations": ["Remote", "Remote EMEA", "Remote EU", "Europe"],
+    "location_keywords": ["remote", "emea", "europe", "wfh", "worldwide"],
+    "max_days_old": 30,
+    "min_score": 4
+  },
+  "pipeline": {
+    "output_file": "scored_jobs.json",
+    "docs_dir": "docs"
+  }
+}
