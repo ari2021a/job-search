@@ -57,11 +57,6 @@ def save_jobs(jobs):
     JOBS_FILE.write_text(json.dumps(jobs, indent=2, ensure_ascii=False))
     print(f"[save] {len(jobs)} jobs saved")
 
-def get_all_roles():
-    s = CONFIG["search"]
-    return (s.get("roles_tier_a",[]) + s.get("roles_tier_b",[]) +
-            s.get("roles_tier_c",[]) + s.get("roles_extra",[]))
-
 def search_jobs():
     tier_a = CONFIG["search"].get("roles_tier_a",[])[:6]
     tier_b = CONFIG["search"].get("roles_tier_b",[])[:5]
@@ -185,7 +180,7 @@ Return this exact JSON structure:
   "match_perfect": ["<skill or experience that perfectly matches a requirement>"],
   "match_partial": ["<skill that partially matches but has gaps>"],
   "match_missing": ["<important requirement candidate clearly lacks>"],
-  "red_flags": ["<important thing to know before applying — travel, seniority mismatch, closed role signal, etc>"]
+  "red_flags": ["<important thing to know before applying>"]
 }}
 
 Scoring rules:
@@ -195,8 +190,8 @@ Scoring rules:
 - 6-7: good match with minor gaps
 - 4-5: partial match
 - 1-3: weak match
-- match_perfect/partial/missing: be specific, reference actual job requirements
-- red_flags: only include real concerns, can be empty list []"""
+- Be specific in match fields, reference actual job requirements
+- red_flags: only real concerns, can be empty []"""
 
 def score_job(job):
     try:
