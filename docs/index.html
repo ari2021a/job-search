@@ -11,377 +11,202 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #f5f7fa;
-  --surface: #ffffff;
-  --surface2: #f0f3f8;
-  --surface3: #e4eaf3;
-  --border: rgba(0,0,0,0.08);
-  --border-active: rgba(37,99,235,0.4);
-  --text: #0f172a;
-  --text-muted: #475569;
-  --text-dim: #94a3b8;
-  --accent: #2563eb;
-  --accent2: #0ea5e9;
-  --gold: #d97706;
-  --green: #16a34a;
-  --red: #dc2626;
-  --orange: #ea580c;
-  --purple: #7c3aed;
-  --score-high: #16a34a;
-  --score-mid: #d97706;
-  --score-low: #dc2626;
-  --radius: 16px;
-  --radius-sm: 10px;
-  --shadow: 0 4px 20px rgba(0,0,0,0.08);
-  --shadow-hover: 0 8px 30px rgba(0,0,0,0.12);
-  --transition: 0.2s cubic-bezier(0.4,0,0.2,1);
-  --nav-height: 64px;
-  --font-display: 'DM Serif Display', serif;
-  --font-body: 'DM Sans', sans-serif;
-  --font-mono: 'DM Mono', monospace;
+  --bg:#f5f7fa;--surface:#fff;--surface2:#f0f3f8;--surface3:#e4eaf3;
+  --border:rgba(0,0,0,0.08);--border-active:rgba(37,99,235,0.4);
+  --text:#0f172a;--text-muted:#475569;--text-dim:#94a3b8;
+  --accent:#2563eb;--accent2:#0ea5e9;--gold:#d97706;--green:#16a34a;
+  --red:#dc2626;--orange:#ea580c;--purple:#7c3aed;
+  --score-high:#16a34a;--score-mid:#d97706;--score-low:#dc2626;
+  --radius:16px;--radius-sm:10px;
+  --shadow:0 4px 20px rgba(0,0,0,0.08);--shadow-hover:0 8px 30px rgba(0,0,0,0.12);
+  --transition:0.2s cubic-bezier(0.4,0,0.2,1);--nav-height:64px;
+  --font-display:'DM Serif Display',serif;--font-body:'DM Sans',sans-serif;
 }
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 16px; -webkit-tap-highlight-color: transparent; }
-body {
-  font-family: var(--font-body);
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100dvh;
-  overflow-x: hidden;
-  padding-bottom: calc(var(--nav-height) + env(safe-area-inset-bottom, 0px));
-}
-button { font-family: inherit; cursor: pointer; border: none; outline: none; }
-input, textarea, select { font-family: inherit; outline: none; }
-a { color: var(--accent); text-decoration: none; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{font-size:16px;-webkit-tap-highlight-color:transparent;}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);min-height:100dvh;overflow-x:hidden;padding-bottom:calc(var(--nav-height) + env(safe-area-inset-bottom,0px));}
+button{font-family:inherit;cursor:pointer;border:none;outline:none;}
+input,textarea,select{font-family:inherit;outline:none;}
+a{color:var(--accent);text-decoration:none;}
+.app{max-width:900px;margin:0 auto;padding:0 16px;}
 
-.app { max-width: 900px; margin: 0 auto; padding: 0 16px; }
+/* Header */
+.header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:12px 16px;}
+.header-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;gap:12px;}
+.header-title{font-family:var(--font-display);font-size:1.35rem;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;flex:1;}
+.header-stats{display:flex;gap:10px;align-items:center;}
+.stat-chip{font-size:.72rem;font-weight:500;padding:4px 10px;background:var(--surface2);border:1px solid var(--border);border-radius:20px;color:var(--text-muted);}
+.stat-chip span{color:var(--accent);font-weight:600;}
 
-.header {
-  position: sticky; top: 0; z-index: 100;
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
-  padding: 12px 16px;
-}
-.header-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; gap: 12px; }
-.header-title {
-  font-family: var(--font-display); font-size: 1.35rem;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-  flex: 1;
-}
-.header-stats { display: flex; gap: 10px; align-items: center; }
-.stat-chip {
-  font-size: 0.72rem; font-weight: 500; padding: 4px 10px;
-  background: var(--surface2); border: 1px solid var(--border);
-  border-radius: 20px; color: var(--text-muted);
-}
-.stat-chip span { color: var(--accent); font-weight: 600; }
+/* Filters */
+.filter-bar{padding:12px 0;display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+.filter-btn{font-size:.8rem;font-weight:500;padding:6px 14px;border-radius:20px;background:var(--surface);border:1px solid var(--border);color:var(--text-muted);transition:all var(--transition);}
+.filter-btn.active,.filter-btn:hover{background:var(--accent);border-color:var(--accent);color:#fff;}
+.search-input{flex:1;min-width:160px;background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:6px 14px;font-size:.85rem;color:var(--text);}
+.search-input::placeholder{color:var(--text-dim);}
+.search-input:focus{border-color:var(--border-active);}
 
-.filter-bar { padding: 12px 0; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-.filter-btn {
-  font-size: 0.8rem; font-weight: 500; padding: 6px 14px;
-  border-radius: 20px; background: var(--surface);
-  border: 1px solid var(--border); color: var(--text-muted);
-  transition: all var(--transition);
-}
-.filter-btn.active, .filter-btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
-.search-input {
-  flex: 1; min-width: 160px; background: var(--surface);
-  border: 1px solid var(--border); border-radius: 20px;
-  padding: 6px 14px; font-size: 0.85rem; color: var(--text);
-}
-.search-input::placeholder { color: var(--text-dim); }
-.search-input:focus { border-color: var(--border-active); }
+/* Add bar */
+.add-bar{display:flex;gap:8px;padding:8px 0 16px;}
+.add-input{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 14px;font-size:.85rem;color:var(--text);transition:border-color var(--transition);}
+.add-input:focus{border-color:var(--border-active);}
+.add-input::placeholder{color:var(--text-dim);}
+.btn-add{padding:10px 18px;background:var(--accent);color:#fff;border-radius:var(--radius-sm);font-size:.85rem;font-weight:600;transition:all var(--transition);white-space:nowrap;}
+.btn-add:hover{background:#1d4ed8;transform:translateY(-1px);}
+.btn-add:disabled{opacity:.5;cursor:not-allowed;transform:none;}
 
-.add-bar { display: flex; gap: 8px; padding: 8px 0 16px; }
-.add-input {
-  flex: 1; background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--radius-sm); padding: 10px 14px;
-  font-size: 0.85rem; color: var(--text); transition: border-color var(--transition);
-}
-.add-input:focus { border-color: var(--border-active); }
-.add-input::placeholder { color: var(--text-dim); }
-.btn-add {
-  padding: 10px 18px; background: var(--accent); color: #fff;
-  border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 600;
-  transition: all var(--transition); white-space: nowrap;
-}
-.btn-add:hover { background: #1d4ed8; transform: translateY(-1px); }
-.btn-add:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+/* Cards */
+.jobs-list{display:flex;flex-direction:column;gap:12px;padding-bottom:16px;}
+.job-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:all var(--transition);animation:slideIn .3s ease both;box-shadow:var(--shadow);}
+@keyframes slideIn{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+.job-card:hover{border-color:var(--border-active);box-shadow:var(--shadow-hover);}
+.job-card.expanded{border-color:var(--border-active);}
 
-.jobs-list { display: flex; flex-direction: column; gap: 12px; padding-bottom: 16px; }
+.job-header{display:flex;gap:12px;align-items:flex-start;padding:16px;cursor:pointer;}
+.score-badge{width:44px;height:44px;flex-shrink:0;border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.2rem;font-weight:700;}
+.score-high{background:#dcfce7;color:var(--score-high);border:1px solid #bbf7d0;}
+.score-mid{background:#fef3c7;color:var(--score-mid);border:1px solid #fde68a;}
+.score-low{background:#fee2e2;color:var(--score-low);border:1px solid #fecaca;}
+.job-meta{flex:1;min-width:0;}
+.job-company{font-size:.75rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px;}
+.job-title{font-size:1rem;font-weight:600;color:var(--text);line-height:1.3;}
+.job-location{font-size:.8rem;color:var(--accent);margin-top:4px;}
+.job-countries{font-size:.75rem;color:var(--text-muted);margin-top:3px;font-style:italic;}
+.job-posted{font-size:.72rem;color:var(--text-dim);margin-top:2px;}
+.job-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0;}
+.status-pill{font-size:.7rem;font-weight:600;padding:3px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:.05em;}
+.s-new{background:#dbeafe;color:#1d4ed8;border:1px solid #bfdbfe;}
+.s-saved{background:#ede9fe;color:#6d28d9;border:1px solid #ddd6fe;}
+.s-applied{background:#fef3c7;color:#b45309;border:1px solid #fde68a;}
+.s-interview{background:#e0f2fe;color:#0369a1;border:1px solid #bae6fd;}
+.s-offer{background:#dcfce7;color:#15803d;border:1px solid #bbf7d0;}
+.s-rejected{background:#fee2e2;color:#b91c1c;border:1px solid #fecaca;}
+.expand-icon{color:var(--text-dim);font-size:.9rem;transition:transform var(--transition);}
+.job-card.expanded .expand-icon{transform:rotate(180deg);}
 
-.job-card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--radius); overflow: hidden;
-  transition: all var(--transition); animation: slideIn 0.3s ease both;
-  box-shadow: var(--shadow);
-}
-@keyframes slideIn { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
-.job-card:hover { border-color: var(--border-active); box-shadow: var(--shadow-hover); }
-.job-card.expanded { border-color: var(--border-active); }
+.job-body{display:none;padding:0 16px 16px;}
+.job-card.expanded .job-body{display:block;}
 
-.job-header { display: flex; gap: 12px; align-items: flex-start; padding: 16px; cursor: pointer; }
-.score-badge {
-  width: 44px; height: 44px; flex-shrink: 0; border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display); font-size: 1.2rem; font-weight: 700;
-}
-.score-high { background: #dcfce7; color: var(--score-high); border: 1px solid #bbf7d0; }
-.score-mid  { background: #fef3c7; color: var(--score-mid);  border: 1px solid #fde68a; }
-.score-low  { background: #fee2e2; color: var(--score-low);  border: 1px solid #fecaca; }
+/* Match Analysis — the new section */
+.match-analysis{margin-bottom:14px;}
+.match-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:8px;}
+.match-box{border-radius:var(--radius-sm);padding:10px 12px;}
+.match-box-perfect{background:#dcfce7;border:1px solid #bbf7d0;}
+.match-box-partial{background:#fef3c7;border:1px solid #fde68a;}
+.match-box-missing{background:#fee2e2;border:1px solid #fecaca;}
+.match-box-title{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;}
+.match-box-perfect .match-box-title{color:var(--green);}
+.match-box-partial .match-box-title{color:var(--gold);}
+.match-box-missing .match-box-title{color:var(--red);}
+.match-item{font-size:.75rem;line-height:1.45;color:var(--text-muted);padding:2px 0;border-bottom:1px solid rgba(0,0,0,0.05);}
+.match-item:last-child{border-bottom:none;}
 
-.job-meta { flex: 1; min-width: 0; }
-.job-company { font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 2px; }
-.job-title { font-size: 1rem; font-weight: 600; color: var(--text); line-height: 1.3; }
-.job-location { font-size: 0.8rem; color: var(--accent); margin-top: 4px; }
-.job-countries { font-size: 0.75rem; color: var(--text-muted); margin-top: 3px; font-style: italic; }
-.job-posted { font-size: 0.72rem; color: var(--text-dim); margin-top: 2px; }
+/* Alerts */
+.alerts-box{background:#fff7ed;border:1px solid #fed7aa;border-radius:var(--radius-sm);padding:10px 12px;margin-bottom:12px;}
+.alerts-title{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--orange);margin-bottom:6px;}
+.alert-item{font-size:.78rem;color:#9a3412;padding:3px 0;display:flex;gap:6px;align-items:flex-start;}
+.alert-item::before{content:"⚠️";flex-shrink:0;font-size:.7rem;margin-top:1px;}
 
-.job-right { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex-shrink: 0; }
-.status-pill {
-  font-size: 0.7rem; font-weight: 600; padding: 3px 10px; border-radius: 20px;
-  text-transform: uppercase; letter-spacing: 0.05em;
-}
-.s-new       { background: #dbeafe; color: #1d4ed8; border: 1px solid #bfdbfe; }
-.s-saved     { background: #ede9fe; color: #6d28d9; border: 1px solid #ddd6fe; }
-.s-applied   { background: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
-.s-interview { background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; }
-.s-offer     { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
-.s-rejected  { background: #fee2e2; color: #b91c1c; border: 1px solid #fecaca; }
+.score-reason{font-size:.82rem;color:var(--text-muted);line-height:1.55;padding:10px 12px;background:var(--surface2);border-radius:var(--radius-sm);border-left:3px solid var(--accent);margin-bottom:12px;}
+.ai-opener{font-size:.82rem;color:var(--text-muted);font-style:italic;line-height:1.5;padding:8px 12px;background:var(--surface2);border-radius:var(--radius-sm);border-left:3px solid var(--purple);margin-bottom:12px;}
 
-.expand-icon { color: var(--text-dim); font-size: 0.9rem; transition: transform var(--transition); }
-.job-card.expanded .expand-icon { transform: rotate(180deg); }
+.actions-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center;}
+.status-select{background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:var(--radius-sm);padding:6px 10px;font-size:.82rem;}
+.btn-link{font-size:.78rem;font-weight:500;padding:6px 12px;border-radius:var(--radius-sm);background:var(--surface2);border:1px solid var(--border);color:var(--text-muted);transition:all var(--transition);display:flex;align-items:center;gap:5px;}
+.btn-link:hover{border-color:var(--border-active);color:var(--accent);}
+.btn-delete{font-size:.78rem;font-weight:500;padding:6px 12px;border-radius:var(--radius-sm);background:#fee2e2;border:1px solid #fecaca;color:var(--red);transition:all var(--transition);margin-left:auto;}
+.btn-delete:hover{background:var(--red);color:#fff;}
 
-.job-body { display: none; padding: 0 16px 16px; }
-.job-card.expanded .job-body { display: block; }
+.ai-buttons{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;}
+.ai-btn{font-size:.75rem;font-weight:500;padding:7px 12px;border-radius:8px;border:1px solid var(--border);color:var(--text-muted);background:var(--surface2);transition:all var(--transition);cursor:pointer;}
+.ai-btn:hover{border-color:var(--gold);color:var(--gold);background:#fef3c7;}
+.ai-btn.loading{opacity:.6;cursor:wait;}
 
-.score-reason {
-  font-size: 0.82rem; color: var(--text-muted); line-height: 1.55;
-  padding: 10px 12px; background: var(--surface2); border-radius: var(--radius-sm);
-  border-left: 3px solid var(--accent); margin-bottom: 12px;
-}
-.ai-opener {
-  font-size: 0.82rem; color: var(--text-muted); font-style: italic; line-height: 1.5;
-  padding: 8px 12px; background: var(--surface2); border-radius: var(--radius-sm);
-  border-left: 3px solid var(--purple); margin-bottom: 12px;
-}
+.section-label{font-size:.72rem;font-weight:600;color:var(--text-dim);text-transform:uppercase;letter-spacing:.07em;margin:12px 0 6px;}
+.notes-area{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 12px;font-size:.84rem;color:var(--text);resize:vertical;min-height:70px;transition:border-color var(--transition);}
+.notes-area:focus{border-color:var(--border-active);}
+.notes-area::placeholder{color:var(--text-dim);}
 
-.actions-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; align-items: center; }
-.status-select {
-  background: var(--surface2); border: 1px solid var(--border);
-  color: var(--text); border-radius: var(--radius-sm);
-  padding: 6px 10px; font-size: 0.82rem;
-}
-.btn-link {
-  font-size: 0.78rem; font-weight: 500; padding: 6px 12px;
-  border-radius: var(--radius-sm); background: var(--surface2);
-  border: 1px solid var(--border); color: var(--text-muted);
-  transition: all var(--transition); display: flex; align-items: center; gap: 5px;
-}
-.btn-link:hover { border-color: var(--border-active); color: var(--accent); }
-.btn-delete {
-  font-size: 0.78rem; font-weight: 500; padding: 6px 12px;
-  border-radius: var(--radius-sm); background: #fee2e2;
-  border: 1px solid #fecaca; color: var(--red);
-  transition: all var(--transition); margin-left: auto;
-}
-.btn-delete:hover { background: var(--red); color: #fff; }
+.interview-list{display:flex;flex-direction:column;gap:8px;}
+.interview-item{background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 12px;display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+.interview-field{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:5px 8px;font-size:.78rem;color:var(--text);width:100%;}
+.interview-field::placeholder{color:var(--text-dim);}
+.btn-add-interview{font-size:.78rem;color:var(--accent);padding:6px 0;background:none;border:none;cursor:pointer;text-align:left;}
+.btn-add-interview:hover{color:#1d4ed8;}
 
-.ai-buttons { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
-.ai-btn {
-  font-size: 0.75rem; font-weight: 500; padding: 7px 12px;
-  border-radius: 8px; border: 1px solid var(--border);
-  color: var(--text-muted); background: var(--surface2);
-  transition: all var(--transition); cursor: pointer;
-}
-.ai-btn:hover { border-color: var(--gold); color: var(--gold); background: #fef3c7; }
-.ai-btn.loading { opacity: 0.6; cursor: wait; }
+/* Modal */
+.modal-overlay{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.4);backdrop-filter:blur(4px);display:flex;align-items:flex-end;opacity:0;pointer-events:none;transition:opacity var(--transition);}
+.modal-overlay.open{opacity:1;pointer-events:all;}
+.modal{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius) var(--radius) 0 0;width:100%;max-height:80dvh;display:flex;flex-direction:column;transform:translateY(100%);transition:transform .3s cubic-bezier(0.4,0,0.2,1);box-shadow:0 -8px 40px rgba(0,0,0,0.15);}
+.modal-overlay.open .modal{transform:translateY(0);}
+.modal-header{padding:16px 20px 12px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);flex-shrink:0;}
+.modal-title{font-family:var(--font-display);font-size:1.1rem;color:var(--accent);}
+.modal-close{width:32px;height:32px;border-radius:50%;background:var(--surface2);border:1px solid var(--border);color:var(--text-muted);font-size:1rem;display:flex;align-items:center;justify-content:center;}
+.modal-body{flex:1;overflow-y:auto;padding:16px 20px;font-size:.87rem;line-height:1.65;color:var(--text-muted);white-space:pre-wrap;}
+.modal-actions{padding:12px 20px;border-top:1px solid var(--border);display:flex;gap:8px;flex-shrink:0;}
+.btn-copy{padding:10px 20px;background:var(--accent);color:#fff;border-radius:var(--radius-sm);font-size:.85rem;font-weight:600;flex:1;}
+.btn-copy:hover{background:#1d4ed8;}
 
-.section-label {
-  font-size: 0.72rem; font-weight: 600; color: var(--text-dim);
-  text-transform: uppercase; letter-spacing: 0.07em; margin: 12px 0 6px;
-}
-.notes-area {
-  width: 100%; background: var(--surface2); border: 1px solid var(--border);
-  border-radius: var(--radius-sm); padding: 10px 12px;
-  font-size: 0.84rem; color: var(--text); resize: vertical; min-height: 70px;
-  transition: border-color var(--transition);
-}
-.notes-area:focus { border-color: var(--border-active); }
-.notes-area::placeholder { color: var(--text-dim); }
+/* Confirm delete */
+.confirm-overlay{position:fixed;inset:0;z-index:300;background:rgba(0,0,0,0.4);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity var(--transition);}
+.confirm-overlay.open{opacity:1;pointer-events:all;}
+.confirm-box{background:var(--surface);border-radius:var(--radius);padding:24px;max-width:320px;width:90%;text-align:center;box-shadow:var(--shadow-hover);}
+.confirm-box h3{font-size:1rem;margin-bottom:8px;}
+.confirm-box p{font-size:.85rem;color:var(--text-muted);margin-bottom:20px;}
+.confirm-btns{display:flex;gap:10px;}
+.btn-cancel{flex:1;padding:10px;border-radius:var(--radius-sm);background:var(--surface2);border:1px solid var(--border);font-size:.85rem;color:var(--text-muted);}
+.btn-confirm-delete{flex:1;padding:10px;border-radius:var(--radius-sm);background:var(--red);color:#fff;font-size:.85rem;font-weight:600;}
 
-.interview-list { display: flex; flex-direction: column; gap: 8px; }
-.interview-item {
-  background: var(--surface2); border: 1px solid var(--border);
-  border-radius: var(--radius-sm); padding: 10px 12px;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
-}
-.interview-field {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 6px; padding: 5px 8px; font-size: 0.78rem;
-  color: var(--text); width: 100%;
-}
-.interview-field::placeholder { color: var(--text-dim); }
-.btn-add-interview {
-  font-size: 0.78rem; color: var(--accent); padding: 6px 0;
-  background: none; border: none; cursor: pointer; text-align: left;
-}
-.btn-add-interview:hover { color: #1d4ed8; }
+/* Nav */
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:150;height:calc(var(--nav-height) + env(safe-area-inset-bottom,0px));padding-bottom:env(safe-area-inset-bottom,0px);background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid var(--border);display:flex;align-items:stretch;}
+.nav-tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;background:none;border:none;color:var(--text-dim);font-size:.65rem;font-weight:500;transition:color var(--transition);cursor:pointer;}
+.nav-tab.active{color:var(--accent);}
+.nav-tab:hover{color:var(--text-muted);}
+.nav-icon{font-size:1.3rem;line-height:1;}
 
-.modal-overlay {
-  position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(4px); display: flex; align-items: flex-end;
-  opacity: 0; pointer-events: none; transition: opacity var(--transition);
-}
-.modal-overlay.open { opacity: 1; pointer-events: all; }
-.modal {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--radius) var(--radius) 0 0; width: 100%; max-height: 80dvh;
-  display: flex; flex-direction: column;
-  transform: translateY(100%); transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
-  box-shadow: 0 -8px 40px rgba(0,0,0,0.15);
-}
-.modal-overlay.open .modal { transform: translateY(0); }
-.modal-header {
-  padding: 16px 20px 12px; display: flex; align-items: center; justify-content: space-between;
-  border-bottom: 1px solid var(--border); flex-shrink: 0;
-}
-.modal-title { font-family: var(--font-display); font-size: 1.1rem; color: var(--accent); }
-.modal-close {
-  width: 32px; height: 32px; border-radius: 50%;
-  background: var(--surface2); border: 1px solid var(--border);
-  color: var(--text-muted); font-size: 1rem;
-  display: flex; align-items: center; justify-content: center;
-}
-.modal-close:hover { background: var(--surface3); }
-.modal-body {
-  flex: 1; overflow-y: auto; padding: 16px 20px;
-  font-size: 0.87rem; line-height: 1.65; color: var(--text-muted); white-space: pre-wrap;
-}
-.modal-actions {
-  padding: 12px 20px; border-top: 1px solid var(--border);
-  display: flex; gap: 8px; flex-shrink: 0;
-}
-.btn-copy {
-  padding: 10px 20px; background: var(--accent); color: #fff;
-  border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 600; flex: 1;
-}
-.btn-copy:hover { background: #1d4ed8; }
+.section{display:none;}
+.section.active{display:block;padding-top:16px;}
 
-/* Confirm delete modal */
-.confirm-overlay {
-  position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,0.4);
-  display: flex; align-items: center; justify-content: center;
-  opacity: 0; pointer-events: none; transition: opacity var(--transition);
-}
-.confirm-overlay.open { opacity: 1; pointer-events: all; }
-.confirm-box {
-  background: var(--surface); border-radius: var(--radius); padding: 24px;
-  max-width: 320px; width: 90%; text-align: center; box-shadow: var(--shadow-hover);
-}
-.confirm-box h3 { font-size: 1rem; margin-bottom: 8px; color: var(--text); }
-.confirm-box p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; }
-.confirm-btns { display: flex; gap: 10px; }
-.btn-cancel {
-  flex: 1; padding: 10px; border-radius: var(--radius-sm);
-  background: var(--surface2); border: 1px solid var(--border);
-  font-size: 0.85rem; color: var(--text-muted);
-}
-.btn-confirm-delete {
-  flex: 1; padding: 10px; border-radius: var(--radius-sm);
-  background: var(--red); color: #fff; font-size: 0.85rem; font-weight: 600;
-}
+/* Analytics */
+.analytics-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px;}
+.metric-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);}
+.metric-label{font-size:.72rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;}
+.metric-value{font-family:var(--font-display);font-size:2rem;color:var(--accent);}
+.metric-sub{font-size:.72rem;color:var(--text-muted);margin-top:2px;}
+.funnel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);}
+.funnel-title{font-size:.8rem;font-weight:600;color:var(--text-muted);margin-bottom:12px;}
+.funnel-row{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.funnel-label{font-size:.78rem;color:var(--text-muted);width:70px;flex-shrink:0;}
+.funnel-bar-wrap{flex:1;background:var(--surface2);border-radius:4px;height:20px;overflow:hidden;}
+.funnel-bar{height:100%;border-radius:4px;transition:width .8s cubic-bezier(0.4,0,0.2,1);display:flex;align-items:center;padding-left:8px;}
+.funnel-bar-label{font-size:.7rem;font-weight:600;color:#fff;}
 
-.bottom-nav {
-  position: fixed; bottom: 0; left: 0; right: 0; z-index: 150;
-  height: calc(var(--nav-height) + env(safe-area-inset-bottom, 0px));
-  padding-bottom: env(safe-area-inset-bottom, 0px);
-  background: rgba(255,255,255,0.95); backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px); border-top: 1px solid var(--border);
-  display: flex; align-items: stretch;
-}
-.nav-tab {
-  flex: 1; display: flex; flex-direction: column; align-items: center;
-  justify-content: center; gap: 3px; background: none; border: none;
-  color: var(--text-dim); font-size: 0.65rem; font-weight: 500;
-  transition: color var(--transition); cursor: pointer;
-}
-.nav-tab.active { color: var(--accent); }
-.nav-tab:hover { color: var(--text-muted); }
-.nav-icon { font-size: 1.3rem; line-height: 1; }
+/* Support */
+.support-section{padding:16px 0;}
+.support-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center;margin-bottom:12px;box-shadow:var(--shadow);}
+.support-emoji{font-size:2.5rem;margin-bottom:10px;}
+.support-title{font-family:var(--font-display);font-size:1.2rem;color:var(--accent);margin-bottom:8px;}
+.support-sub{font-size:.85rem;color:var(--text-muted);line-height:1.6;margin-bottom:16px;}
+.support-btns{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;}
+.support-btn{font-size:.82rem;font-weight:500;padding:9px 16px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--surface2);color:var(--text-muted);transition:all var(--transition);cursor:pointer;}
+.support-btn:hover{border-color:var(--purple);color:var(--purple);background:#ede9fe;}
 
-.section { display: none; }
-.section.active { display: block; padding-top: 16px; }
-
-.analytics-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; margin-bottom: 16px; }
-.metric-card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow);
-}
-.metric-label { font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
-.metric-value { font-family: var(--font-display); font-size: 2rem; color: var(--accent); }
-.metric-sub { font-size: 0.72rem; color: var(--text-muted); margin-top: 2px; }
-
-.funnel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow); }
-.funnel-title { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); margin-bottom: 12px; }
-.funnel-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-.funnel-label { font-size: 0.78rem; color: var(--text-muted); width: 70px; flex-shrink: 0; }
-.funnel-bar-wrap { flex: 1; background: var(--surface2); border-radius: 4px; height: 20px; overflow: hidden; }
-.funnel-bar { height: 100%; border-radius: 4px; transition: width 0.8s cubic-bezier(0.4,0,0.2,1); display: flex; align-items: center; padding-left: 8px; }
-.funnel-bar-label { font-size: 0.7rem; font-weight: 600; color: #fff; }
-
-.support-section { padding: 16px 0; }
-.support-card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: 20px; text-align: center;
-  margin-bottom: 12px; box-shadow: var(--shadow);
-}
-.support-emoji { font-size: 2.5rem; margin-bottom: 10px; }
-.support-title { font-family: var(--font-display); font-size: 1.2rem; color: var(--accent); margin-bottom: 8px; }
-.support-sub { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px; }
-.support-btns { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
-.support-btn {
-  font-size: 0.82rem; font-weight: 500; padding: 9px 16px;
-  border-radius: var(--radius-sm); border: 1px solid var(--border);
-  background: var(--surface2); color: var(--text-muted);
-  transition: all var(--transition); cursor: pointer;
-}
-.support-btn:hover { border-color: var(--purple); color: var(--purple); background: #ede9fe; }
-
-.toast {
-  position: fixed; top: 70px; left: 50%; transform: translateX(-50%) translateY(-10px);
-  background: var(--text); border-radius: var(--radius-sm); padding: 10px 20px;
-  font-size: 0.84rem; color: #fff; opacity: 0; pointer-events: none;
-  transition: all 0.3s ease; z-index: 400; white-space: nowrap;
-}
-.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-
-.spinner {
-  display: inline-block; width: 14px; height: 14px;
-  border: 2px solid rgba(255,255,255,0.3); border-top-color: #fff;
-  border-radius: 50%; animation: spin 0.7s linear infinite;
-}
-@keyframes spin { to { transform: rotate(360deg); } }
-
-.empty-state { text-align: center; padding: 60px 20px; color: var(--text-dim); }
-.empty-state-icon { font-size: 2.5rem; margin-bottom: 12px; }
-.empty-state h3 { font-family: var(--font-display); font-size: 1.2rem; color: var(--text-muted); margin-bottom: 6px; }
-.empty-state p { font-size: 0.85rem; }
-
-::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--surface3); border-radius: 3px; }
-
-@media (min-width: 600px) {
-  .analytics-grid { grid-template-columns: repeat(4,1fr); }
-}
+.toast{position:fixed;top:70px;left:50%;transform:translateX(-50%) translateY(-10px);background:var(--text);border-radius:var(--radius-sm);padding:10px 20px;font-size:.84rem;color:#fff;opacity:0;pointer-events:none;transition:all .3s ease;z-index:400;white-space:nowrap;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+.spinner{display:inline-block;width:14px;height:14px;border:2px solid rgba(255,255,255,0.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.empty-state{text-align:center;padding:60px 20px;color:var(--text-dim);}
+.empty-state-icon{font-size:2.5rem;margin-bottom:12px;}
+.empty-state h3{font-family:var(--font-display);font-size:1.2rem;color:var(--text-muted);margin-bottom:6px;}
+.empty-state p{font-size:.85rem;}
+::-webkit-scrollbar{width:6px;height:6px;}
+::-webkit-scrollbar-track{background:transparent;}
+::-webkit-scrollbar-thumb{background:var(--surface3);border-radius:3px;}
+@media(min-width:600px){.analytics-grid{grid-template-columns:repeat(4,1fr);}.match-row{grid-template-columns:1fr 1fr 1fr;}}
+@media(max-width:599px){.match-row{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
-
 <div class="header">
   <div class="header-inner">
     <div class="header-title">⚡ Eric's Job Tracker</div>
@@ -391,7 +216,6 @@ a { color: var(--accent); text-decoration: none; }
     </div>
   </div>
 </div>
-
 <div class="app">
   <section class="section active" id="sec-jobs">
     <div class="filter-bar">
@@ -408,41 +232,18 @@ a { color: var(--accent); text-decoration: none; }
       <button class="btn-add" id="add-url-btn">+ Add</button>
     </div>
     <div class="jobs-list" id="jobs-list">
-      <div class="empty-state">
-        <div class="empty-state-icon">🔍</div>
-        <h3>No jobs loaded yet</h3>
-        <p>Run the pipeline or paste a URL above to get started.</p>
-      </div>
+      <div class="empty-state"><div class="empty-state-icon">🔍</div><h3>No jobs loaded yet</h3><p>Run the pipeline or paste a URL above.</p></div>
     </div>
   </section>
 
   <section class="section" id="sec-analytics">
     <div class="analytics-grid">
-      <div class="metric-card">
-        <div class="metric-label">Total Jobs</div>
-        <div class="metric-value" id="m-total">0</div>
-        <div class="metric-sub">in tracker</div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-label">Applied</div>
-        <div class="metric-value" id="m-applied">0</div>
-        <div class="metric-sub">applications sent</div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-label">Interviews</div>
-        <div class="metric-value" id="m-interviews">0</div>
-        <div class="metric-sub">active rounds</div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-label">Avg Score</div>
-        <div class="metric-value" id="m-avg-score">—</div>
-        <div class="metric-sub">fit score</div>
-      </div>
+      <div class="metric-card"><div class="metric-label">Total Jobs</div><div class="metric-value" id="m-total">0</div><div class="metric-sub">in tracker</div></div>
+      <div class="metric-card"><div class="metric-label">Applied</div><div class="metric-value" id="m-applied">0</div><div class="metric-sub">sent</div></div>
+      <div class="metric-card"><div class="metric-label">Interviews</div><div class="metric-value" id="m-interviews">0</div><div class="metric-sub">active</div></div>
+      <div class="metric-card"><div class="metric-label">Avg Score</div><div class="metric-value" id="m-avg-score">—</div><div class="metric-sub">fit score</div></div>
     </div>
-    <div class="funnel">
-      <div class="funnel-title">Application Funnel</div>
-      <div id="funnel-rows"></div>
-    </div>
+    <div class="funnel"><div class="funnel-title">Application Funnel</div><div id="funnel-rows"></div></div>
   </section>
 
   <section class="section" id="sec-support">
@@ -458,7 +259,7 @@ a { color: var(--accent); text-decoration: none; }
           <button class="support-btn" onclick="getSupport('no_responses')">No responses lately</button>
           <button class="support-btn" onclick="getSupport('imposter')">Imposter syndrome</button>
           <button class="support-btn" onclick="getSupport('burnout')">Feeling burned out</button>
-          <button class="support-btn" onclick="getSupport('good_news')">Got good news!</button>
+          <button class="support-btn" onclick="getSupport('good_news')">Got good news! 🎉</button>
         </div>
       </div>
     </div>
@@ -466,27 +267,16 @@ a { color: var(--accent); text-decoration: none; }
 </div>
 
 <nav class="bottom-nav">
-  <button class="nav-tab active" data-tab="jobs" onclick="switchTab('jobs')">
-    <span class="nav-icon">💼</span><span>Jobs</span>
-  </button>
-  <button class="nav-tab" data-tab="analytics" onclick="switchTab('analytics')">
-    <span class="nav-icon">📊</span><span>Analytics</span>
-  </button>
-  <button class="nav-tab" data-tab="support" onclick="switchTab('support')">
-    <span class="nav-icon">💬</span><span>Support</span>
-  </button>
+  <button class="nav-tab active" data-tab="jobs" onclick="switchTab('jobs')"><span class="nav-icon">💼</span><span>Jobs</span></button>
+  <button class="nav-tab" data-tab="analytics" onclick="switchTab('analytics')"><span class="nav-icon">📊</span><span>Analytics</span></button>
+  <button class="nav-tab" data-tab="support" onclick="switchTab('support')"><span class="nav-icon">💬</span><span>Support</span></button>
 </nav>
 
 <div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
   <div class="modal">
-    <div class="modal-header">
-      <div class="modal-title" id="modal-title">AI Assistant</div>
-      <button class="modal-close" onclick="closeModal()">✕</button>
-    </div>
+    <div class="modal-header"><div class="modal-title" id="modal-title">AI Assistant</div><button class="modal-close" onclick="closeModal()">✕</button></div>
     <div class="modal-body" id="modal-body">Loading…</div>
-    <div class="modal-actions">
-      <button class="btn-copy" onclick="copyModal()">Copy to clipboard</button>
-    </div>
+    <div class="modal-actions"><button class="btn-copy" onclick="copyModal()">Copy to clipboard</button></div>
   </div>
 </div>
 
@@ -505,124 +295,98 @@ a { color: var(--accent); text-decoration: none; }
 
 <script>
 const PROFILE_MD = `Aaron (Eric) Barrari — Business Operations & Operational Excellence Leader
-25+ years | FinTech, SaaS, Payments, Technology | Remote from Spain only
-Specialisms: Business Operations, Operational Excellence, Change Management, RevOps, Business Development
-Key wins: 900% quota attainment (PayPal), ISO 9001 governance (500-person org), 150% revenue growth + 30% cost reduction, $500K revenue in 8 months, 80-100 audits/year, 70+ merchant activations/month
-Current: Enterprise CS & Merchant Operations at ResultsCX (PayPal), managing 200+ EMEA merchants
-MBA Finance & Banking | B.Sc. Industrial Engineering | Lean Six Sigma YB | English C2
-No travel roles. Must be workable from Spain.`;
+25+ years | FinTech, SaaS, Payments, Technology | Remote from Spain ONLY — no relocation, no travel
+Core: Business Operations, Operational Excellence, Change Management, RevOps, Business Development, ISO 9001, Program Management
+Key wins: 900% quota attainment (PayPal/ResultsCX), ISO 9001 governance across 500-person org (TTI Telecom), 80-100 audits/year, 150% revenue growth + 30% cost reduction, $500K revenue in 8 months, 70+ merchant activations/month, managed 6 production centres + multi-million-dollar budgets (IDF)
+Current: Enterprise CS & Merchant Operations at ResultsCX (PayPal) — 200+ EMEA merchants, 100+ active opportunities
+MBA Finance & Banking | B.Sc. Industrial Engineering | Lean Six Sigma Yellow Belt | English C2`;
 
-let jobs = {};
-let filter = 'all';
-let searchQ = '';
-let apiKey = localStorage.getItem('anthropic_key') || '';
-let pendingDeleteId = null;
+let jobs={}, filter='all', searchQ='', apiKey=localStorage.getItem('anthropic_key')||'', pendingDeleteId=null;
 
-async function init() {
-  try {
-    const resp = await fetch('scored_jobs.json');
-    if (resp.ok) {
-      const arr = await resp.json();
-      arr.forEach(j => { if (j.id && !jobs[j.id]) jobs[j.id] = j; });
-    }
-  } catch(e) {}
-  const stored = localStorage.getItem('jobs_state');
-  if (stored) {
-    try { Object.assign(jobs, JSON.parse(stored)); } catch(e) {}
-  }
-  if (!apiKey) promptApiKey();
-  renderJobs();
-  updateStats();
+async function init(){
+  try{const r=await fetch('scored_jobs.json');if(r.ok){const arr=await r.json();arr.forEach(j=>{if(j.id&&!jobs[j.id])jobs[j.id]=j;});}}catch(e){}
+  const s=localStorage.getItem('jobs_state');if(s){try{Object.assign(jobs,JSON.parse(s));}catch(e){}}
+  if(!apiKey)promptApiKey();
+  renderJobs();updateStats();
 }
-
-function promptApiKey() {
-  const k = prompt("Enter your Anthropic API key to enable AI features (stored locally only):");
-  if (k) { apiKey = k.trim(); localStorage.setItem('anthropic_key', apiKey); }
-}
-
-function saveLocal() { localStorage.setItem('jobs_state', JSON.stringify(jobs)); }
-
-function switchTab(tab) {
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.nav-tab').forEach(b => b.classList.remove('active'));
-  document.getElementById('sec-' + tab).classList.add('active');
+function promptApiKey(){const k=prompt("Enter your Anthropic API key to enable AI features (stored locally only):");if(k){apiKey=k.trim();localStorage.setItem('anthropic_key',apiKey);}}
+function saveLocal(){localStorage.setItem('jobs_state',JSON.stringify(jobs));}
+function switchTab(tab){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('sec-'+tab).classList.add('active');
   document.querySelector(`[data-tab="${tab}"]`).classList.add('active');
-  if (tab === 'analytics') renderAnalytics();
+  if(tab==='analytics')renderAnalytics();
 }
-
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    filter = btn.dataset.filter;
-    renderJobs();
-  });
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');filter=btn.dataset.filter;renderJobs();});
 });
-document.getElementById('search-input').addEventListener('input', e => { searchQ = e.target.value.toLowerCase(); renderJobs(); });
+document.getElementById('search-input').addEventListener('input',e=>{searchQ=e.target.value.toLowerCase();renderJobs();});
 
-function scoreClass(s) { return s >= 7 ? 'score-high' : s >= 4 ? 'score-mid' : 'score-low'; }
-function statusClass(s) { return 's-' + (s || 'new'); }
+function scoreClass(s){return s>=7?'score-high':s>=4?'score-mid':'score-low';}
+function statusClass(s){return 's-'+(s||'new');}
+function relativeDate(d){if(!d)return'';const dt=new Date(d);if(isNaN(dt))return d;const days=Math.round((Date.now()-dt)/86400000);if(days===0)return'Today';if(days===1)return'Yesterday';if(days<7)return`${days}d ago`;if(days<30)return`${Math.round(days/7)}w ago`;return`${Math.round(days/30)}mo ago`;}
 
-function relativeDate(dateStr) {
-  if (!dateStr) return '';
-  const d = new Date(dateStr);
-  if (isNaN(d)) return dateStr;
-  const days = Math.round((Date.now() - d) / 86400000);
-  if (days === 0) return 'Today';
-  if (days === 1) return 'Yesterday';
-  if (days < 7) return `${days}d ago`;
-  if (days < 30) return `${Math.round(days/7)}w ago`;
-  return `${Math.round(days/30)}mo ago`;
+function extractCountries(loc){
+  if(!loc)return'';const l=loc.toLowerCase();const out=[];
+  const map={worldwide:'🌍 Worldwide',global:'🌍 Global',emea:'🌍 EMEA',europe:'🇪🇺 Europe',eu:'🇪🇺 EU',uk:'🇬🇧 UK',spain:'🇪🇸 Spain',germany:'🇩🇪 Germany',france:'🇫🇷 France',netherlands:'🇳🇱 Netherlands',ireland:'🇮🇪 Ireland',israel:'🇮🇱 Israel',usa:'🇺🇸 USA',canada:'🇨🇦 Canada',australia:'🇦🇺 Australia'};
+  for(const[k,v]of Object.entries(map)){if(l.includes(k)&&!out.includes(v))out.push(v);}
+  if(!out.length&&l.includes('remote'))out.push('🌍 Remote');
+  return out.length?'Eligible: '+out.join(' · '):'';
 }
 
-function extractCountries(location) {
-  if (!location) return '';
-  const loc = location.toLowerCase();
-  const countries = [];
-  const map = {
-    'worldwide': '🌍 Worldwide', 'global': '🌍 Global',
-    'emea': '🌍 EMEA', 'europe': '🇪🇺 Europe',
-    'eu': '🇪🇺 EU', 'uk': '🇬🇧 UK', 'spain': '🇪🇸 Spain',
-    'germany': '🇩🇪 Germany', 'france': '🇫🇷 France',
-    'netherlands': '🇳🇱 Netherlands', 'ireland': '🇮🇪 Ireland',
-    'israel': '🇮🇱 Israel', 'usa': '🇺🇸 USA', 'us': '🇺🇸 USA',
-    'canada': '🇨🇦 Canada', 'australia': '🇦🇺 Australia',
-  };
-  for (const [key, label] of Object.entries(map)) {
-    if (loc.includes(key) && !countries.includes(label)) countries.push(label);
-  }
-  if (countries.length === 0 && loc.includes('remote')) countries.push('🌍 Remote');
-  return countries.length ? 'Eligible: ' + countries.join(' · ') : '';
+function renderMatchAnalysis(j){
+  const perfect = j.match_perfect||[];
+  const partial = j.match_partial||[];
+  const missing = j.match_missing||[];
+  const alerts = j.alerts||[];
+  if(!perfect.length&&!partial.length&&!missing.length&&!alerts.length)return'';
+
+  const alertsHtml = alerts.length?`
+    <div class="alerts-box">
+      <div class="alerts-title">⚠️ Before you apply — important to know</div>
+      ${alerts.map(a=>`<div class="alert-item">${esc(a)}</div>`).join('')}
+    </div>`:'';
+
+  const matchHtml = (perfect.length||partial.length||missing.length)?`
+    <div class="match-row">
+      <div class="match-box match-box-perfect">
+        <div class="match-box-title">✅ Strong Match</div>
+        ${perfect.length?perfect.map(i=>`<div class="match-item">${esc(i)}</div>`).join(''):'<div class="match-item" style="color:var(--text-dim)">—</div>'}
+      </div>
+      <div class="match-box match-box-partial">
+        <div class="match-box-title">🔶 Partial Match</div>
+        ${partial.length?partial.map(i=>`<div class="match-item">${esc(i)}</div>`).join(''):'<div class="match-item" style="color:var(--text-dim)">—</div>'}
+      </div>
+      <div class="match-box match-box-missing">
+        <div class="match-box-title">❌ Gap / Missing</div>
+        ${missing.length?missing.map(i=>`<div class="match-item">${esc(i)}</div>`).join(''):'<div class="match-item" style="color:var(--text-dim)">—</div>'}
+      </div>
+    </div>`:'';
+
+  return`<div class="match-analysis">${alertsHtml}${matchHtml}</div>`;
 }
 
-function getFilteredJobs() {
-  return Object.values(jobs).filter(j => {
-    if (filter !== 'all' && j.status !== filter) return false;
-    if (searchQ) {
-      if (!`${j.company} ${j.title} ${j.location}`.toLowerCase().includes(searchQ)) return false;
-    }
+function getFilteredJobs(){
+  return Object.values(jobs).filter(j=>{
+    if(filter!=='all'&&j.status!==filter)return false;
+    if(searchQ&&!`${j.company} ${j.title} ${j.location}`.toLowerCase().includes(searchQ))return false;
     return true;
-  }).sort((a,b) => (b.fit_score||0) - (a.fit_score||0));
+  }).sort((a,b)=>(b.fit_score||0)-(a.fit_score||0));
 }
 
-function renderJobs() {
-  const list = document.getElementById('jobs-list');
-  const filtered = getFilteredJobs();
-  if (!filtered.length) {
-    list.innerHTML = `<div class="empty-state"><div class="empty-state-icon">🔍</div>
-      <h3>${Object.keys(jobs).length ? 'No matches' : 'No jobs yet'}</h3>
-      <p>${Object.keys(jobs).length ? 'Try a different filter.' : 'Run the pipeline or paste a URL above.'}</p></div>`;
-    return;
-  }
-  list.innerHTML = filtered.map(j => renderCard(j)).join('');
+function renderJobs(){
+  const list=document.getElementById('jobs-list');
+  const filtered=getFilteredJobs();
+  if(!filtered.length){list.innerHTML=`<div class="empty-state"><div class="empty-state-icon">🔍</div><h3>${Object.keys(jobs).length?'No matches':'No jobs yet'}</h3><p>${Object.keys(jobs).length?'Try a different filter.':'Run the pipeline or paste a URL above.'}</p></div>`;return;}
+  list.innerHTML=filtered.map(j=>renderCard(j)).join('');
   updateStats();
 }
 
-function renderCard(j) {
-  const score = j.fit_score || 0;
-  const status = j.status || 'new';
-  const countries = extractCountries(j.location);
-  const interviews = (j.interviews||[]).map((iv,i) => `
+function renderCard(j){
+  const score=j.fit_score||0,status=j.status||'new';
+  const countries=extractCountries(j.location);
+  const interviews=(j.interviews||[]).map((iv,i)=>`
     <div class="interview-item">
       <input class="interview-field" placeholder="Date" value="${esc(iv.date||'')}" onchange="updateInterview('${j.id}',${i},'date',this.value)">
       <input class="interview-field" placeholder="Stage" value="${esc(iv.stage||'')}" onchange="updateInterview('${j.id}',${i},'stage',this.value)">
@@ -630,14 +394,14 @@ function renderCard(j) {
       <input class="interview-field" placeholder="Outcome" value="${esc(iv.outcome||'')}" onchange="updateInterview('${j.id}',${i},'outcome',this.value)">
     </div>`).join('');
 
-  return `<div class="job-card" id="card-${j.id}">
+  return`<div class="job-card" id="card-${j.id}">
     <div class="job-header" onclick="toggleCard('${j.id}')">
       <div class="score-badge ${scoreClass(score)}">${score}</div>
       <div class="job-meta">
         <div class="job-company">${esc(j.company)}</div>
         <div class="job-title">${esc(j.title)}</div>
         <div class="job-location">📍 ${esc(j.location)}</div>
-        ${countries ? `<div class="job-countries">${countries}</div>` : ''}
+        ${countries?`<div class="job-countries">${countries}</div>`:''}
         <div class="job-posted">${relativeDate(j.posted)} · ${esc(j.source||'Pipeline')}</div>
       </div>
       <div class="job-right">
@@ -646,12 +410,12 @@ function renderCard(j) {
       </div>
     </div>
     <div class="job-body">
-      ${j.score_reason ? `<div class="score-reason">🎯 ${esc(j.score_reason)}</div>` : ''}
-      ${j.ai_opener ? `<div class="ai-opener">✍️ "${esc(j.ai_opener)}"</div>` : ''}
+      ${renderMatchAnalysis(j)}
+      ${j.score_reason?`<div class="score-reason">🎯 ${esc(j.score_reason)}</div>`:''}
+      ${j.ai_opener?`<div class="ai-opener">✍️ "${esc(j.ai_opener)}"</div>`:''}
       <div class="actions-row">
         <select class="status-select" onchange="updateStatus('${j.id}',this.value)">
-          ${['new','saved','applied','interview','offer','rejected'].map(s =>
-            `<option value="${s}" ${status===s?'selected':''}>${s.charAt(0).toUpperCase()+s.slice(1)}</option>`).join('')}
+          ${['new','saved','applied','interview','offer','rejected'].map(s=>`<option value="${s}" ${status===s?'selected':''}>${s.charAt(0).toUpperCase()+s.slice(1)}</option>`).join('')}
         </select>
         <a class="btn-link" href="${esc(j.url)}" target="_blank" rel="noopener">🔗 View Posting</a>
         <button class="btn-delete" onclick="askDelete('${j.id}')">🗑 Delete</button>
@@ -673,19 +437,17 @@ function renderCard(j) {
   </div>`;
 }
 
-function toggleCard(id) { document.getElementById('card-'+id)?.classList.toggle('expanded'); }
-function esc(str) { return String(str||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-
-function updateStatus(id,status) { if(jobs[id]){jobs[id].status=status;saveLocal();updateStats();} }
-function updateNotes(id,notes) { if(jobs[id]){jobs[id].notes=notes;saveLocal();} }
-function updateInterview(id,idx,field,val) { if(jobs[id]?.interviews?.[idx]){jobs[id].interviews[idx][field]=val;saveLocal();} }
-
-function addInterview(id) {
-  if(!jobs[id].interviews) jobs[id].interviews=[];
+function toggleCard(id){document.getElementById('card-'+id)?.classList.toggle('expanded');}
+function esc(str){return String(str||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function updateStatus(id,s){if(jobs[id]){jobs[id].status=s;saveLocal();updateStats();}}
+function updateNotes(id,n){if(jobs[id]){jobs[id].notes=n;saveLocal();}}
+function updateInterview(id,i,f,v){if(jobs[id]?.interviews?.[i]){jobs[id].interviews[i][f]=v;saveLocal();}}
+function addInterview(id){
+  if(!jobs[id].interviews)jobs[id].interviews=[];
   jobs[id].interviews.push({date:'',stage:'',interviewer:'',outcome:''});
   saveLocal();
-  const c = document.getElementById('interviews-'+id);
-  if(c) c.innerHTML = (jobs[id].interviews||[]).map((iv,i)=>`
+  const c=document.getElementById('interviews-'+id);
+  if(c)c.innerHTML=(jobs[id].interviews||[]).map((iv,i)=>`
     <div class="interview-item">
       <input class="interview-field" placeholder="Date" value="${esc(iv.date||'')}" onchange="updateInterview('${id}',${i},'date',this.value)">
       <input class="interview-field" placeholder="Stage" value="${esc(iv.stage||'')}" onchange="updateInterview('${id}',${i},'stage',this.value)">
@@ -693,162 +455,99 @@ function addInterview(id) {
       <input class="interview-field" placeholder="Outcome" value="${esc(iv.outcome||'')}" onchange="updateInterview('${id}',${i},'outcome',this.value)">
     </div>`).join('');
 }
-
-// Delete
-function askDelete(id) { pendingDeleteId = id; document.getElementById('confirm-overlay').classList.add('open'); }
-function closeConfirm() { pendingDeleteId = null; document.getElementById('confirm-overlay').classList.remove('open'); }
-function confirmDelete() {
-  if(!pendingDeleteId) return;
-  delete jobs[pendingDeleteId];
-  saveLocal(); closeConfirm(); renderJobs(); showToast('🗑 Job deleted');
+function askDelete(id){pendingDeleteId=id;document.getElementById('confirm-overlay').classList.add('open');}
+function closeConfirm(){pendingDeleteId=null;document.getElementById('confirm-overlay').classList.remove('open');}
+function confirmDelete(){if(!pendingDeleteId)return;delete jobs[pendingDeleteId];saveLocal();closeConfirm();renderJobs();showToast('🗑 Job deleted');}
+function updateStats(){const all=Object.values(jobs);document.getElementById('stat-total').textContent=all.length;document.getElementById('stat-applied').textContent=all.filter(j=>['applied','interview','offer'].includes(j.status)).length;}
+function renderAnalytics(){
+  const all=Object.values(jobs);const statuses=['new','saved','applied','interview','offer','rejected'];
+  const counts={};statuses.forEach(s=>counts[s]=all.filter(j=>(j.status||'new')===s).length);
+  document.getElementById('m-total').textContent=all.length;
+  document.getElementById('m-applied').textContent=counts.applied;
+  document.getElementById('m-interviews').textContent=counts.interview;
+  const scores=all.map(j=>j.fit_score||0).filter(s=>s>0);
+  document.getElementById('m-avg-score').textContent=scores.length?(scores.reduce((a,b)=>a+b,0)/scores.length).toFixed(1):'—';
+  const colors={new:'#2563eb',saved:'#7c3aed',applied:'#d97706',interview:'#0369a1',offer:'#16a34a',rejected:'#dc2626'};
+  const max=Math.max(...Object.values(counts),1);
+  document.getElementById('funnel-rows').innerHTML=statuses.map(s=>`
+    <div class="funnel-row"><div class="funnel-label">${s.charAt(0).toUpperCase()+s.slice(1)}</div>
+    <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:${counts[s]/max*100}%;background:${colors[s]}"><span class="funnel-bar-label">${counts[s]}</span></div></div></div>`).join('');
 }
 
-function updateStats() {
-  const all = Object.values(jobs);
-  document.getElementById('stat-total').textContent = all.length;
-  document.getElementById('stat-applied').textContent = all.filter(j=>['applied','interview','offer'].includes(j.status)).length;
-}
-
-function renderAnalytics() {
-  const all = Object.values(jobs);
-  const statuses = ['new','saved','applied','interview','offer','rejected'];
-  const counts = {}; statuses.forEach(s => counts[s] = all.filter(j=>(j.status||'new')===s).length);
-  document.getElementById('m-total').textContent = all.length;
-  document.getElementById('m-applied').textContent = counts.applied;
-  document.getElementById('m-interviews').textContent = counts.interview;
-  const scores = all.map(j=>j.fit_score||0).filter(s=>s>0);
-  document.getElementById('m-avg-score').textContent = scores.length ? (scores.reduce((a,b)=>a+b,0)/scores.length).toFixed(1) : '—';
-  const colors = {new:'#2563eb',saved:'#7c3aed',applied:'#d97706',interview:'#0369a1',offer:'#16a34a',rejected:'#dc2626'};
-  const max = Math.max(...Object.values(counts),1);
-  document.getElementById('funnel-rows').innerHTML = statuses.map(s=>`
-    <div class="funnel-row">
-      <div class="funnel-label">${s.charAt(0).toUpperCase()+s.slice(1)}</div>
-      <div class="funnel-bar-wrap">
-        <div class="funnel-bar" style="width:${counts[s]/max*100}%;background:${colors[s]}">
-          <span class="funnel-bar-label">${counts[s]}</span>
-        </div>
-      </div>
-    </div>`).join('');
-}
-
-// Add by URL
-document.getElementById('add-url-btn').addEventListener('click', async () => {
-  const url = document.getElementById('add-url-input').value.trim();
-  if (!url) return;
-  if (!apiKey) { promptApiKey(); return; }
-  const btn = document.getElementById('add-url-btn');
-  btn.disabled = true; btn.innerHTML = '<span class="spinner"></span>';
-  try {
-    const result = await callClaude('claude-sonnet-4-20250514','Extract job details. Return ONLY JSON.',
-      `Extract job details from this URL. Return JSON with fields: company, title, location, url, posted, description, source.
-URL: ${url}
-If you cannot access the URL, infer from the URL structure. Return only the JSON object.`);
-    const jobData = parseJSON(result);
-    if (jobData?.title) {
-      const id = simpleHash(`${jobData.company}-${jobData.title}-${url}`);
-      jobs[id] = {...jobData, url, id, fit_score:0, score_reason:'Manually added — scoring pending',
-        ai_opener:'', location_ok:true, status:'new', notes:'', interviews:[],
-        added_at:new Date().toISOString(), last_updated:new Date().toISOString(), initial_status:'manual', source:jobData.source||'Manual'};
-      const scoring = await scoreJobFrontend(jobs[id]);
-      Object.assign(jobs[id], scoring);
-      saveLocal(); renderJobs();
-      document.getElementById('add-url-input').value = '';
-      showToast(`✅ Added: ${jobData.title} @ ${jobData.company}`);
-    } else { showToast('⚠️ Could not extract job details.'); }
-  } catch(e) { showToast('⚠️ Error: ' + e.message); }
-  finally { btn.disabled=false; btn.textContent='+ Add'; }
+document.getElementById('add-url-btn').addEventListener('click',async()=>{
+  const url=document.getElementById('add-url-input').value.trim();
+  if(!url)return;if(!apiKey){promptApiKey();return;}
+  const btn=document.getElementById('add-url-btn');btn.disabled=true;btn.innerHTML='<span class="spinner"></span>';
+  try{
+    const result=await callClaude('claude-sonnet-4-20250514','Extract job details. Return ONLY JSON.',
+      `Extract job details from this URL. Return JSON: company, title, location, url, posted, description, source.\nURL: ${url}`);
+    const d=parseJSON(result);
+    if(d?.title){
+      const id=simpleHash(`${d.company}-${d.title}-${url}`);
+      jobs[id]={...d,url,id,fit_score:0,score_reason:'Manually added',match_perfect:[],match_partial:[],match_missing:[],alerts:[],ai_opener:'',location_ok:true,status:'new',notes:'',interviews:[],added_at:new Date().toISOString(),last_updated:new Date().toISOString(),initial_status:'manual',source:d.source||'Manual'};
+      const scoring=await scoreJobFrontend(jobs[id]);Object.assign(jobs[id],scoring);
+      saveLocal();renderJobs();document.getElementById('add-url-input').value='';
+      showToast(`✅ Added: ${d.title} @ ${d.company}`);
+    }else showToast('⚠️ Could not extract job details.');
+  }catch(e){showToast('⚠️ '+e.message);}
+  finally{btn.disabled=false;btn.textContent='+ Add';}
 });
 
-async function scoreJobFrontend(job) {
-  try {
-    const result = await callClaude('claude-haiku-4-5-20251001','Return ONLY JSON.',
+async function scoreJobFrontend(job){
+  try{
+    const result=await callClaude('claude-haiku-4-5-20251001','Return ONLY JSON.',
       `Score this job for: ${PROFILE_MD}
 Job: ${job.company} — ${job.title} — ${job.location}
 Description: ${job.description}
-Return JSON: {"fit_score":1-10,"score_reason":"2-3 sentences","ai_opener":"one sentence","location_ok":true/false}
-Score 0 if: on-site only, requires travel >20%, not workable from Spain.`);
-    return parseJSON(result);
-  } catch(e) { return {}; }
+Return JSON: {"fit_score":1-10,"location_ok":true/false,"match_perfect":[],"match_partial":[],"match_missing":[],"alerts":[],"score_reason":"2 sentences","ai_opener":"one sentence"}
+Score 0 if hybrid/on-site/travel required/not workable from Spain.`);
+    return parseJSON(result)||{};
+  }catch(e){return{};}
 }
 
-const AI_PROMPTS = {
-  cover_letter: j => `Write a personalised cover letter for Aaron (Eric) Barrari applying to:
-${j.company} — ${j.title} | ${j.location}
-Job description: ${j.description}
-Candidate: ${PROFILE_MD}
-Write 3 paragraphs: strong hook mentioning the company specifically, match 2-3 experience points to requirements, confident close. Professional and warm tone.`,
-
-  interview_prep: j => `Prepare Aaron (Eric) Barrari for an interview at ${j.company} for: ${j.title}
-Description: ${j.description}
-Profile: ${PROFILE_MD}
-Provide: 8 interview questions (behavioural + situational + role-specific), STAR talking points for each using Eric's real experience, 5 smart questions to ask the interviewer, key themes to emphasise.`,
-
-  voice_sim: j => `Simulate a realistic ${j.status||'phone screen'} interview for ${j.company} — ${j.title}.
-Profile: ${PROFILE_MD}
-Write a dialogue of 5-6 Q&A pairs appropriate for the stage (${j.status}). Make the interviewer questions realistic and Eric's answers specific and confident.`,
-
-  dossier: j => `Research ${j.company} for a senior candidate considering: ${j.title}
-Include: business model, recent news/funding, culture signals, likely interview focus areas, 5 smart questions Eric should ask, potential red flags, salary benchmarks for this role remote EMEA.`,
-
-  cv_tailor: j => `Tailor Aaron (Eric) Barrari's CV for: ${j.company} — ${j.title}
-Description: ${j.description}
-Profile: ${PROFILE_MD}
-Provide: revised 3-sentence professional summary (ATS-optimised), top 5 bullet points rewritten to mirror the job description, optimised skills section, any gaps to address in cover letter.`,
-
-  emotional: j => `You are a warm career coach for Aaron (Eric) Barrari.
-He is applying for: ${j.company} — ${j.title} (status: ${j.status||'new'})
-Background: 25+ years experience, operational excellence and RevOps leader, based in Spain, seeking remote roles.
-Write 150-200 words of grounded, warm support relevant to this specific job and stage. No toxic positivity. End with one concrete next action.`
+const AI_PROMPTS={
+  cover_letter:j=>`Write a personalised cover letter for Aaron (Eric) Barrari applying to:\n${j.company} — ${j.title} | ${j.location}\nDescription: ${j.description}\nProfile: ${PROFILE_MD}\n3 paragraphs: specific hook about the company, 2-3 matched experience points, confident close.`,
+  interview_prep:j=>`Prepare Aaron (Eric) Barrari for interview at ${j.company} — ${j.title}\nDescription: ${j.description}\nProfile: ${PROFILE_MD}\nProvide: 8 interview questions, STAR talking points using Eric's real experience for each, 5 smart questions to ask, key themes to emphasise.`,
+  voice_sim:j=>`Simulate a ${j.status||'phone screen'} interview dialogue for ${j.company} — ${j.title}.\nProfile: ${PROFILE_MD}\nWrite 5-6 realistic Q&A pairs for the current stage (${j.status}). Make Eric's answers specific and confident.`,
+  dossier:j=>`Research ${j.company} for a senior candidate applying for: ${j.title}\nInclude: business model, recent news/funding, culture signals, likely interview focus, 5 smart questions to ask, red flags to probe, salary benchmarks for remote EMEA.`,
+  cv_tailor:j=>`Tailor Aaron (Eric) Barrari's CV for: ${j.company} — ${j.title}\nDescription: ${j.description}\nProfile: ${PROFILE_MD}\nProvide: revised 3-sentence professional summary (ATS-optimised), top 5 bullet points rewritten to mirror JD, optimised skills section, gaps to address in cover letter.`,
+  emotional:j=>`You are a warm career coach for Aaron (Eric) Barrari.\nApplying for: ${j.company} — ${j.title} (status: ${j.status||'new'})\nProfile: ${PROFILE_MD}\n150-200 words of grounded, warm support for this specific job and stage. No toxic positivity. End with one concrete next action.`
 };
 
-async function aiAction(type, jobId) {
-  if (!apiKey) { promptApiKey(); return; }
-  const j = jobs[jobId]; if (!j) return;
-  const titles = {cover_letter:'✉️ Cover Letter',interview_prep:'🎯 Interview Prep',voice_sim:'🎤 Voice Simulation',dossier:'🏢 Company Dossier',cv_tailor:'📄 CV Tailoring',emotional:'💙 Emotional Support'};
-  const btn = document.querySelector(`#card-${jobId} .ai-btn[onclick*="${type}"]`);
-  if (btn) { btn.classList.add('loading'); btn.textContent = '⏳ Loading…'; }
-  showModal(titles[type], '⏳ Generating…');
-  try {
-    const result = await callClaude('claude-sonnet-4-20250514','You are a world-class career coach. Be specific and tailored.',AI_PROMPTS[type](j), type==='dossier');
-    showModal(titles[type], result);
-  } catch(e) { showModal(titles[type], '⚠️ Error: '+e.message); }
-  finally { if(btn){btn.classList.remove('loading');btn.innerHTML=titles[type];} }
+async function aiAction(type,jobId){
+  if(!apiKey){promptApiKey();return;}
+  const j=jobs[jobId];if(!j)return;
+  const titles={cover_letter:'✉️ Cover Letter',interview_prep:'🎯 Interview Prep',voice_sim:'🎤 Voice Simulation',dossier:'🏢 Company Dossier',cv_tailor:'📄 CV Tailoring',emotional:'💙 Emotional Support'};
+  const btn=document.querySelector(`#card-${jobId} .ai-btn[onclick*="${type}"]`);
+  if(btn){btn.classList.add('loading');btn.textContent='⏳ Loading…';}
+  showModal(titles[type],'⏳ Generating…');
+  try{const result=await callClaude('claude-sonnet-4-20250514','You are a world-class career coach. Be specific and tailored.',AI_PROMPTS[type](j),type==='dossier');showModal(titles[type],result);}
+  catch(e){showModal(titles[type],'⚠️ Error: '+e.message);}
+  finally{if(btn){btn.classList.remove('loading');btn.innerHTML=titles[type];}}
 }
 
-async function getSupport(situation) {
-  if (!apiKey) { promptApiKey(); return; }
-  const contexts = {rejection:'just received a rejection',stuck:'feeling stuck in the search',interview_anxiety:'has an interview coming up and is nervous',no_responses:'not getting responses',imposter:'experiencing imposter syndrome',burnout:'feeling burned out',good_news:'just received good news'};
+async function getSupport(situation){
+  if(!apiKey){promptApiKey();return;}
+  const ctx={rejection:'just received a rejection',stuck:'feeling stuck',interview_anxiety:'has an interview coming up and is nervous',no_responses:'not getting responses',imposter:'experiencing imposter syndrome',burnout:'feeling burned out',good_news:'just received good news'};
   showModal('💙 Emotional Support','⏳ Your coach is here…');
-  try {
-    const result = await callClaude('claude-sonnet-4-20250514','You are a warm, experienced career coach.',
-      `Support Aaron (Eric) Barrari who has ${contexts[situation]}. Profile: ${PROFILE_MD}
-Write 200-300 words of warm, grounded support. Acknowledge the feeling, normalise it, give 2-3 concrete next steps, end with genuine encouragement. Be real, not generic.`);
-    showModal('💙 Emotional Support', result);
-  } catch(e) { showModal('💙 Emotional Support','⚠️ '+e.message); }
+  try{const r=await callClaude('claude-sonnet-4-20250514','You are a warm, experienced career coach.',`Support Aaron (Eric) Barrari who has ${ctx[situation]}.\nProfile: ${PROFILE_MD}\n200-300 words of warm, grounded support. Acknowledge the feeling, normalise it, 2-3 concrete next steps, genuine encouragement. No generic advice.`);showModal('💙 Emotional Support',r);}
+  catch(e){showModal('💙 Emotional Support','⚠️ '+e.message);}
 }
 
-async function callClaude(model, system, user, useWebSearch=false) {
-  const body = {model, max_tokens:2048, system, messages:[{role:'user',content:user}]};
-  if (useWebSearch) body.tools = [{type:'web_search_20250305',name:'web_search'}];
-  const resp = await fetch('https://api.anthropic.com/v1/messages',{
-    method:'POST',
-    headers:{'content-type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-    body:JSON.stringify(body)
-  });
-  if(!resp.ok){const e=await resp.json().catch(()=>({}));throw new Error(e.error?.message||`API error ${resp.status}`);}
-  const data = await resp.json();
+async function callClaude(model,system,user,useSearch=false){
+  const body={model,max_tokens:2048,system,messages:[{role:'user',content:user}]};
+  if(useSearch)body.tools=[{type:'web_search_20250305',name:'web_search'}];
+  const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'content-type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify(body)});
+  if(!r.ok){const e=await r.json().catch(()=>({}));throw new Error(e.error?.message||`API error ${r.status}`);}
+  const data=await r.json();
   return data.content.filter(b=>b.type==='text').map(b=>b.text).join('\n');
 }
 
-function showModal(title,body) {
-  document.getElementById('modal-title').textContent=title;
-  document.getElementById('modal-body').textContent=body;
-  document.getElementById('modal-overlay').classList.add('open');
-}
-function closeModal(e) { if(!e||e.target===document.getElementById('modal-overlay')) document.getElementById('modal-overlay').classList.remove('open'); }
-function copyModal() { navigator.clipboard.writeText(document.getElementById('modal-body').textContent).then(()=>showToast('✅ Copied!')); }
-function showToast(msg) { const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3000); }
-function parseJSON(text) {
+function showModal(title,body){document.getElementById('modal-title').textContent=title;document.getElementById('modal-body').textContent=body;document.getElementById('modal-overlay').classList.add('open');}
+function closeModal(e){if(!e||e.target===document.getElementById('modal-overlay'))document.getElementById('modal-overlay').classList.remove('open');}
+function copyModal(){navigator.clipboard.writeText(document.getElementById('modal-body').textContent).then(()=>showToast('✅ Copied!'));}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3000);}
+function parseJSON(text){
   text=text.trim().replace(/^```(?:json)?\s*/,'').replace(/\s*```$/,'');
   const s=text.indexOf('{'),e=text.lastIndexOf('}');
   if(s!==-1&&e>s){try{return JSON.parse(text.slice(s,e+1));}catch(err){}}
@@ -857,7 +556,6 @@ function parseJSON(text) {
   try{return JSON.parse(text);}catch(err){return null;}
 }
 function simpleHash(str){let h=0;for(let i=0;i<str.length;i++)h=((h<<5)-h+str.charCodeAt(i))|0;return Math.abs(h).toString(16).slice(0,12);}
-
 init();
 </script>
 </body>
