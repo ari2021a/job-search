@@ -34,6 +34,6 @@ jobs:
         run: |
           git config --global user.name "Job Search Bot"
           git config --global user.email "bot@job-search.local"
-          git add scored_jobs.json docs/scored_jobs.json docs/index.html || true
-          git diff --cached --quiet || git commit -m "chore: pipeline run $(date -u '+%Y-%m-%d %H:%M') UTC"
+          git add scored_jobs.json docs/scored_jobs.json .last_run || true
+          git diff --cached --quiet || git commit -m "pipeline run $(date -u '+%Y-%m-%d %H:%M') UTC"
           git push || echo "Nothing to push"
