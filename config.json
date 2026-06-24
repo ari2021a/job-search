@@ -63,14 +63,26 @@
     "locations": ["Remote", "Remote EMEA", "Remote EU", "Remote Worldwide"],
     "location_keywords": ["remote", "emea", "europe", "wfh", "worldwide"],
     "exclude_keywords": ["hybrid", "on-site", "in-office", "relocation", "travel required", "frequent travel"],
-    "search_sources": ["LinkedIn", "Indeed", "Greenhouse", "Lever", "Ashby", "Workday"],
-    "max_days_old": 30,
+    "search_sources": [
+      "LinkedIn Jobs (linkedin.com/jobs)",
+      "Indeed Spain (indeed.es)",
+      "Glassdoor Spain (glassdoor.es)",
+      "InfoJobs (infojobs.net)",
+      "Tecnoempleo (tecnoempleo.com)",
+      "Greenhouse job boards",
+      "Lever job boards",
+      "company career pages"
+    ],
+    "first_run_hours": 72,
+    "subsequent_run_hours": 24,
+    "max_days_old": 3,
     "min_score": 4
   },
   "pipeline": {
     "jobs_per_run": 20,
     "ats_sources": ["greenhouse", "lever", "ashby"],
     "output_file": "scored_jobs.json",
-    "docs_dir": "docs"
+    "docs_dir": "docs",
+    "last_run_file": ".last_run"
   }
 }
