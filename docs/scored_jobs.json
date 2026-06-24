@@ -247,5 +247,130 @@
     "added_at": "2026-06-24T22:16:25.499310+00:00",
     "last_updated": "2026-06-24T22:16:25.499312+00:00",
     "initial_status": null
+  },
+  {
+    "company": "Remote.com",
+    "title": "Senior Manager, GTM Analytics & Planning",
+    "location": "Remote, Worldwide",
+    "url": "https://remote.com/openings/7729511003",
+    "posted": "Active",
+    "description": "Lead execution of data strategy within Revenue Operations. Primary steward of GTM health metrics, build frameworks for scale, manage sales analytics, capacity planning, and target-setting. Reports to SVP of Finance, Strategy and RevOps. Global salary bands with geographic pay differentials.",
+    "source": "Remote.com Careers",
+    "fit_score": 6,
+    "location_ok": true,
+    "score_reason": "Strong operational and RevOps background with proven GTM execution and metrics leadership, but role is analytics-heavy and reports to Finance rather than Chief Revenue Officer\u2014a lateral or slight step back from target C-suite trajectory. Remote-first arrangement aligns perfectly.",
+    "ai_opener": "With 25+ years scaling revenue operations across PayPal, FinTech, and manufacturing environments, I've built the GTM analytics frameworks and capacity models that drive predictable, profitable growth\u2014and I'm ready to apply that expertise to establish Remote.com's data-driven operational backbone.",
+    "match_perfect": [
+      "Remote-only role workable from Spain",
+      "Revenue Operations strategy and execution",
+      "GTM metrics and performance frameworks",
+      "Sales analytics and capacity planning",
+      "SaaS / FinTech industry experience (PayPal, ResultsCX)",
+      "International multi-region operations management",
+      "Process redesign and operational excellence",
+      "Fluent English (C2) for global communication"
+    ],
+    "match_partial": [
+      "Senior Manager level\u2014candidate targets Director/VP/C-suite; role may feel lateral",
+      "Analytics-focused vs. candidate's broader P&L and business transformation background",
+      "Reports to SVP Finance rather than CRO/COO (less direct revenue accountability than target roles)"
+    ],
+    "match_missing": [
+      "Deep data science or BI tool expertise (Tableau, Looker, SQL) not evident from profile",
+      "Explicit GTM analytics platform ownership or predictive modeling background"
+    ],
+    "red_flags": [
+      "Role emphasizes analytics stewardship\u2014candidate's strength is operational leadership and revenue growth; may underutilize strategic business development skills",
+      "Reports to Finance, not Chief Revenue Officer\u2014potential misalignment with candidate's target trajectory toward CRO/COO",
+      "No indication of tech stack proficiency (analytics tools, data warehousing) that modern RevOps analytics roles often require"
+    ],
+    "id": "e5f2da1b77f5",
+    "status": "new",
+    "notes": "",
+    "interviews": [],
+    "added_at": "2026-06-24T22:26:24.557337+00:00",
+    "last_updated": "2026-06-24T22:26:24.557350+00:00",
+    "initial_status": null
+  },
+  {
+    "company": "Pleo",
+    "title": "Director, GTM Operations",
+    "location": "Remote or Hybrid, Europe",
+    "url": "https://www.pleo.io/en/careers/jobs/7653447003",
+    "posted": "Active",
+    "description": "Help architect and execute the engine that powers global growth as part of the RevOps leadership team. FinTech spending solution company scaling across Europe. Work with Sales, Marketing, and Customer Success. Offers both hybrid and fully remote working options for team members.",
+    "source": "Pleo Careers",
+    "fit_score": 8,
+    "location_ok": true,
+    "score_reason": "Excellent alignment on RevOps leadership, FinTech/SaaS domain, remote work, and 25+ years seniority. Direct PayPal/merchant ops experience and proven GTM scaling track record match the role's core mandate.",
+    "ai_opener": "As a RevOps and operational excellence leader who scaled merchant operations to 900% quota attainment at PayPal and drove 150% business growth through process transformation, I'm excited to architect Pleo's GTM engine across EMEA.",
+    "match_perfect": [
+      "RevOps / GTM Operations leadership experience (PayPal merchant operations, sales operations at H&W)",
+      "FinTech domain expertise (PayPal, payment solutions, merchant scaling)",
+      "Remote work from Spain with no relocation requirement",
+      "Director/VP seniority with 25+ years in operations and scaling",
+      "Cross-functional collaboration (Sales, Marketing, Customer Success alignment)",
+      "Process optimisation and operational excellence (70+ activations/month, structured workflows)"
+    ],
+    "match_partial": [
+      "Global GTM execution (EMEA-focused at PayPal; broader experience at TTI Telecom and IDF, but less recent global scaling)",
+      "Marketing operations interface (strong Sales & CS; less direct MarTech/demand gen background mentioned)"
+    ],
+    "match_missing": [],
+    "red_flags": [
+      "Current role at PayPal/ResultsCX started May 2024 \u2014 only ~6\u20139 months tenure; timing of departure may require thoughtful narrative",
+      "No explicit CRM/RevOps platform expertise mentioned (Salesforce, HubSpot, etc.) \u2014 confirm technical stack alignment in screening"
+    ],
+    "id": "b820eb3c8a4b",
+    "status": "new",
+    "notes": "",
+    "interviews": [],
+    "added_at": "2026-06-24T22:26:24.557361+00:00",
+    "last_updated": "2026-06-24T22:26:24.557363+00:00",
+    "initial_status": null
+  },
+  {
+    "company": "Apollo.io",
+    "title": "GTM Strategy & Operations Manager - Analytics & Intelligence",
+    "location": "Remote, Worldwide",
+    "url": "https://www.workingnomads.com/jobs/gtm-strategy-operations-manager-analytics-intelligence-apolloio-1494345",
+    "posted": "Active",
+    "description": "Sits at center of Go-To-Market organization ensuring data, forecasting, and GTM performance metrics are accurate and accessible. Work with BI/Analytics, Sales Ops, CS Ops, Finance, and GTM leadership. B2B SaaS platform with 210M+ contacts, Series D funded.",
+    "source": "Working Nomads",
+    "fit_score": 5,
+    "location_ok": true,
+    "score_reason": "Aaron has strong operational excellence and cross-functional leadership experience, but this role is a step down in seniority (Manager vs. Director/VP target) and pivots toward analytics/BI execution rather than strategic P&L ownership. The GTM ops domain is adjacent to his strengths but not his core expertise.",
+    "ai_opener": "With 25+ years driving operational transformation across 500-person tech organizations and delivering 150% growth through process redesign, I've built the data-driven, cross-functional rigor that powers high-performing GTM engines.",
+    "match_perfect": [
+      "Remote-only role based in Spain",
+      "SaaS/B2B software industry",
+      "Cross-functional stakeholder management (Sales, CS, Finance, Leadership)",
+      "Process optimization and operational excellence mindset",
+      "Merchant/customer intelligence and opportunity pipeline management (PayPal)"
+    ],
+    "match_partial": [
+      "GTM operations experience (PayPal merchant success is adjacent, not core GTM strategy)",
+      "Analytics/metrics acumen (managed KPIs and performance metrics, but not BI/analytics expertise)",
+      "Series D scale familiarity (managed medium teams; not hypergrowth SaaS scaling)"
+    ],
+    "match_missing": [
+      "BI/analytics tools expertise (SQL, Looker, Tableau, data warehousing\u2014not mentioned)",
+      "Forecasting & revenue modeling experience (not highlighted in background)",
+      "Sales operations or finance systems background (Salesforce, Marketo, NetSuite, etc.)",
+      "Manager-level role (candidate targets Director/VP; this is individual contributor Manager level)"
+    ],
+    "red_flags": [
+      "Significant seniority step-down: 25+ years targeting C-suite/Director, offered Manager role\u2014may feel demotionally misaligned",
+      "Analytics-heavy role requires technical BI/SQL fluency not evident in resume; upskilling time required",
+      "PayPal role is very recent (May 2024); moving again within 6\u20138 months could signal instability to hiring managers",
+      "GTM strategy & operations is specialized domain; Aaron's strength is operational P&L ownership, not data infrastructure"
+    ],
+    "id": "0d7d16b328d9",
+    "status": "new",
+    "notes": "",
+    "interviews": [],
+    "added_at": "2026-06-24T22:26:24.557372+00:00",
+    "last_updated": "2026-06-24T22:26:24.557373+00:00",
+    "initial_status": null
   }
 ]
