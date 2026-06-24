@@ -1,1 +1,251 @@
-{}
+{
+  "05772407c00f": {
+    "company": "Revolut",
+    "title": "Strategy & Operations Manager",
+    "location": "Remote, Spain",
+    "url": "https://www.glassdoor.es/job-listing/strategy-operations-manager-revolut-JV_KO0,27_KE28,35.htm?jl=1009997489660",
+    "posted": "Recent (verify on site)",
+    "description": "Problem-solving at scale role tackling company's toughest challenges. Involves strategic projects, vendor management, and building performance tracking systems. Requires FinTech/consulting background.",
+    "source": "Glassdoor España",
+    "fit_score": 7,
+    "location_ok": true,
+    "score_reason": "Strong operational and FinTech background with proven scale-up experience at PayPal aligns well with Revolut's problem-solving mandate. Seniority level slightly above typical for this role, but remote-first Spain setup is perfect fit.",
+    "ai_opener": "My 25 years scaling operations across FinTech, SaaS, and high-growth tech—most recently driving 900% merchant quota attainment at PayPal—positions me to tackle Revolut's toughest strategic and operational challenges at enterprise scale.",
+    "match_perfect": [
+      "FinTech industry expertise (PayPal, payments ecosystem)",
+      "Remote work from Spain with no relocation needs",
+      "Strategic problem-solving and process optimisation track record",
+      "Vendor and stakeholder management experience",
+      "Performance metrics and KPI-driven culture",
+      "English fluency (C2) and multilingual advantage for global team"
+    ],
+    "match_partial": [
+      "Consulting background (business consultant listed but not elaborated; strategic advisory roles implied rather than formal consulting tenure)",
+      "Performance tracking systems (built governance and ISO frameworks, but not explicitly technology/BI-focused implementations)",
+      "Seniority expectation (Director/VP target vs. Manager-level role—overqualified but willing to take on strategic scope)"
+    ],
+    "match_missing": [
+      "Specific FinTech product strategy or roadmap experience",
+      "Data analytics or business intelligence tooling background",
+      "Formal consulting firm pedigree (if preferred by Revolut)"
+    ],
+    "red_flags": [
+      "Significant seniority mismatch—candidate targets VP/C-suite roles; this is Manager-level and may feel like a step down despite strategic scope",
+      "CV abruptly cuts off mid-role ('Business Consultant, Lecturer & Profe')—incomplete profile raises questions about recency and full context",
+      "No explicit mention of technology stack, data tools, or analytics expertise (key for 'performance tracking systems' mandate)"
+    ],
+    "id": "05772407c00f",
+    "status": "new",
+    "notes": "",
+    "interviews": [],
+    "added_at": "2026-06-24T22:16:25.499241+00:00",
+    "last_updated": "2026-06-24T22:16:25.499254+00:00",
+    "initial_status": null
+  },
+  "41d5fd443925": {
+    "company": "Mews",
+    "title": "Senior Strategy & Operations Manager",
+    "location": "Remote (EMEA)",
+    "url": "https://www.glassdoor.es/job-listing/senior-strategy-operations-manager-mews-JV_KO0,34_KE35,39.htm?jl=1010162691202",
+    "posted": "Recent (verify on site)",
+    "description": "Partner with SVP of Customer Experience on strategic priorities. Drive cross-functional initiatives spanning Customer Success, Onboarding, Support, and Product. 7+ years consulting/strategy experience required. Remote-first company.",
+    "source": "Glassdoor España",
+    "fit_score": 7,
+    "location_ok": true,
+    "score_reason": "Strong operational and strategy background with proven cross-functional leadership at scale, but seniority expectation (7+ years consulting/strategy) is notably below candidate's 25+ years experience and C-suite ambitions. Remote-first EMEA role aligns perfectly with location/work arrangement constraints.",
+    "ai_opener": "With 25+ years driving operational excellence and cross-functional transformation across 500-employee tech organisations, I'm drawn to Mews' opportunity to shape customer experience strategy at a remote-first scale.",
+    "match_perfect": [
+      "Remote-first company based in EMEA",
+      "Cross-functional programme leadership (CS, Onboarding, Support proven at PayPal/ResultsCX)",
+      "Strategic operations mindset with business transformation track record",
+      "Process optimisation and operational excellence expertise"
+    ],
+    "match_partial": [
+      "Consulting/strategy experience: candidate has internal strategy/operational consulting roles but limited external consulting firm background",
+      "SVP partnership model: candidate has led peer and senior stakeholder relationships but primarily in operator/manager capacity, not consultant advisory"
+    ],
+    "match_missing": [
+      "Explicit consulting or strategy firm tenure (7+ years requirement)"
+    ],
+    "red_flags": [
+      "Significant overqualification: candidate targets VP/C-suite roles; this is Senior Manager level (likely 2-3 report layers below target)",
+      "Recent tenure instability: PayPal role started May 2024 (6-8 months current); may signal role fit or growth concerns",
+      "CV incomplete: professional experience section cuts off mid-sentence at 'Business Consultant, Lecturer & Profe' — unclear scope of consulting work"
+    ],
+    "id": "41d5fd443925",
+    "status": "new",
+    "notes": "",
+    "interviews": [],
+    "added_at": "2026-06-24T22:16:25.499268+00:00",
+    "last_updated": "2026-06-24T22:16:25.499271+00:00",
+    "initial_status": null
+  },
+  "b9baababa32c": {
+    "company": "Tinybird",
+    "title": "Chief of Staff",
+    "location": "Remote (Global)",
+    "url": "https://www.glassdoor.es/job-listing/chief-of-staff-tinybird-JV_KO0,14_KE15,23.htm?jl=1010166667463",
+    "posted": "Recent (verify on site)",
+    "description": "Lead special projects spanning operations, GTM, marketing, product, and fundraising. Support CEO and leadership team. B2B SaaS technology company. Remote-first with periodic team meetups.",
+    "source": "Glassdoor España",
+    "fit_score": 8,
+    "location_ok": true,
+    "score_reason": "Excellent match: 25+ years senior operations and business leadership experience directly aligns with Chief of Staff scope (operations, GTM, strategy). Remote-first role from Spain meets all location requirements, though lack of explicit SaaS/FinTech experience is noted.",
+    "ai_opener": "With 25 years leading operational excellence, business transformation, and cross-functional strategy across scale-ups and enterprises—including 150% business growth and 30% cost reduction—I'm drawn to Tinybird's Chief of Staff role to drive operational rigor and growth acceleration across your GTM and product initiatives.",
+    "match_perfect": [
+      "Remote-only role workable from Spain",
+      "Senior/C-suite seniority level (25+ years)",
+      "Cross-functional operations, strategy, and GTM leadership",
+      "Experience supporting and enabling leadership teams",
+      "Business transformation and process optimization expertise",
+      "International team management and complex stakeholder alignment",
+      "Merchant/customer operations and growth at scale"
+    ],
+    "match_partial": [
+      "B2B SaaS experience (primarily in Payments/FinTech adjacent, not pure SaaS product)",
+      "Fundraising exposure (CFO/board liaison level, not investor-facing lead)",
+      "Product/marketing collaboration (more operations-focused than product strategy expertise)"
+    ],
+    "match_missing": [
+      "Explicit SaaS product company experience (background heavier in services/payments/telecom)",
+      "Data/analytics product familiarity (Tinybird's core domain)"
+    ],
+    "red_flags": [
+      "No explicit SaaS or data product background; Chief of Staff often requires fluency in product metrics and technology roadmap",
+      "Resume cuts off mid-section; verify full experience depth in recent consulting/lecturer roles",
+      "Periodic team meetups mentioned—confirm travel expectations align with Spain base (should be minimal but verify budget/frequency)"
+    ],
+    "id": "b9baababa32c",
+    "status": "new",
+    "notes": "",
+    "interviews": [],
+    "added_at": "2026-06-24T22:16:25.499279+00:00",
+    "last_updated": "2026-06-24T22:16:25.499282+00:00",
+    "initial_status": null
+  },
+  "f03be4dd1794": {
+    "company": "Fonoa",
+    "title": "Revenue Operations Manager",
+    "location": "Remote, Europe",
+    "url": "https://startup.jobs/revenue-operations-manager-remote-europe-fonoa_hq-2951943",
+    "posted": "Active listing",
+    "description": "Partner with CRO to drive go-to-market vision. 5+ years RevOps/BizOps in B2B SaaS. Company automates taxes for marketplaces and fintech. Fully distributed team across Europe.",
+    "source": "Startup.jobs",
+    "fit_score": 7,
+    "location_ok": true,
+    "score_reason": "Strong operational and merchant/customer success background directly applicable to RevOps in B2B SaaS; proven quota attainment and process optimization align well with go-to-market execution. Seniority level (25+ years, director/VP track) exceeds typical RevOps Manager expectations, creating potential overqualification risk.",
+    "ai_opener": "With 25+ years driving operational excellence and 900% quota attainment across merchant platforms, I'm ready to translate customer success rigor into revenue operations strategy at a scaled fintech company.",
+    "match_perfect": [
+      "Remote-only role fully aligned with Spain WFH requirement",
+      "B2B SaaS industry experience (PayPal Merchant Solutions, fintech exposure)",
+      "RevOps-adjacent skills: process optimization, merchant/opportunity management, compliance, multi-stakeholder coordination",
+      "Proven commercial execution and quota/growth metrics",
+      "European timezone + EMEA operations expertise"
+    ],
+    "match_partial": [
+      "5+ years RevOps/BizOps required: candidate has strong operational and customer success background but RevOps title/formal experience not explicitly stated",
+      "CRO partnership: extensive experience with senior stakeholder management, but primarily in merchant/customer success rather than executive go-to-market alignment",
+      "SaaS scaling experience: strong in PayPal (scale), but most recent role is vendor-side customer success rather than product company RevOps"
+    ],
+    "match_missing": [
+      "Formal RevOps role title and hands-on experience with SaaS revenue operations tools (Salesforce, Gainsight, Looker, or similar stack)",
+      "Explicit experience with sales enablement, forecast accuracy, or pipeline management from SaaS perspective"
+    ],
+    "red_flags": [
+      "Significant seniority mismatch: candidate targets director/VP/C-suite roles; this is a manager-level position—risk of boredom, tenure, or counter-offer dynamics",
+      "Unfinished employment history (CV cuts off mid-role description: 'Business Consultant, Lecturer & Profe'—may indicate recent role or data gap)",
+      "RevOps is a specialist discipline; candidate's strength is operational excellence and merchant management, not systems-driven revenue intelligence"
+    ],
+    "id": "f03be4dd1794",
+    "status": "new",
+    "notes": "",
+    "interviews": [],
+    "added_at": "2026-06-24T22:16:25.499290+00:00",
+    "last_updated": "2026-06-24T22:16:25.499292+00:00",
+    "initial_status": null
+  },
+  "53e504bbb7a1": {
+    "company": "Snapsheet",
+    "title": "GTM Strategy and Operations Lead",
+    "location": "Remote, USA (verify Spain eligibility)",
+    "url": "https://www.ziprecruiter.com/Jobs/Gtm-Strategy",
+    "posted": "Recent",
+    "description": "Rebuild GTM infrastructure from legacy to scalable systems. 6+ years Sales/Revenue Operations in SaaS. Reports to Director of Sales. InsurTech company.",
+    "source": "ZipRecruiter",
+    "fit_score": 5,
+    "location_ok": true,
+    "score_reason": "Aaron has strong operational excellence and process optimization credentials, but lacks the specific 6+ years SaaS Revenue Operations expertise the role demands. Role is remote-eligible from Spain, but represents a lateral or junior step from his VP/Director-level target seniority.",
+    "ai_opener": "With 25+ years driving operational transformation and 900% quota attainment across merchant-scaled operations, I've built the scalable GTM infrastructure that turns legacy processes into competitive advantage—and I'm ready to rebuild Snapsheet's sales engine.",
+    "match_perfect": [
+      "Remote work from Spain (verified)",
+      "Process optimization and operational excellence expertise",
+      "Merchant/customer acquisition and retention at scale",
+      "Cross-functional execution (sales, operations, compliance)",
+      "International operations experience (EMEA, multi-region)"
+    ],
+    "match_partial": [
+      "SaaS experience (PayPal is B2B payments SaaS-adjacent, not pure SaaS)",
+      "Sales operations (managed merchants and opportunity pipelines, not traditional Revenue Operations/GTM infrastructure)",
+      "InsurTech sector (no direct insurance or insurtech background; fintech transferable)"
+    ],
+    "match_missing": [
+      "6+ years dedicated Sales/Revenue Operations in SaaS (background is merchant operations, not RevOps/GTM systems)",
+      "GTM strategy rebuilds (process optimization ≠ GTM infrastructure design)",
+      "Specific SaaS metrics fluency (ARR, CAC, LTV, expansion revenue, etc.)"
+    ],
+    "red_flags": [
+      "Seniority mismatch: role reports to Director of Sales; Aaron targets VP/C-suite. Career step backward.",
+      "RevOps gap: no demonstrated background in Sales Development, Account Executive, or Revenue Operations discipline—expertise is merchant management and operational governance, not SaaS go-to-market architecture.",
+      "Insurance sector: no insurtech or insurance vertical experience; learning curve may be steep.",
+      "USA-based company: confirm Spain remote eligibility and timezone overlap with US Sales leadership."
+    ],
+    "id": "53e504bbb7a1",
+    "status": "new",
+    "notes": "",
+    "interviews": [],
+    "added_at": "2026-06-24T22:16:25.499300+00:00",
+    "last_updated": "2026-06-24T22:16:25.499302+00:00",
+    "initial_status": null
+  },
+  "a889f3c962f2": {
+    "company": "Sensay",
+    "title": "Chief of Staff",
+    "location": "Remote, EMEA",
+    "url": "https://www.linkedin.com/jobs/view/chief-of-staff-at-sensay-4341363035",
+    "posted": "Recent",
+    "description": "Advisor role supporting organizational knowledge retention using AI. Work from anywhere with global team. Low-meeting culture focused on results.",
+    "source": "LinkedIn",
+    "fit_score": 5,
+    "location_ok": true,
+    "score_reason": "Chief of Staff aligns with Aaron's C-suite aspirations and remote-first requirement, but the role appears advisory/operational-support rather than P&L leadership or director-level authority he targets. Sensay's AI knowledge-retention focus is a niche vertical without clear SaaS/FinTech operational scale matching his enterprise background.",
+    "ai_opener": "With 25+ years driving operational excellence, business transformation, and organizational scaling across FinTech and SaaS—including a 150% revenue lift at a 500-person tech firm—I'm drawn to a Chief of Staff role that leverages strategic operations expertise to amplify organizational impact.",
+    "match_perfect": [
+      "Remote-only, Spain-based work arrangement",
+      "Results-focused, low-meeting culture aligns with operational efficiency mindset",
+      "Global team exposure matches EMEA/international experience"
+    ],
+    "match_partial": [
+      "C-suite proximity (Chief of Staff) vs. direct P&L leadership role he prefers",
+      "Organizational knowledge/governance touches on his audit & process expertise, but AI-advisory is tangential to ops leadership",
+      "Early-stage or scaling tech company (if Sensay is pre-Series C) vs. enterprise-scale preference"
+    ],
+    "match_missing": [
+      "No indication of revenue operations, business development, or customer success P&L ownership",
+      "Niche AI knowledge-retention vertical vs. FinTech/SaaS/Payments core industries",
+      "Advisory role lacks clear direct report management or operational decision authority",
+      "No visibility into company stage, burn, or growth metrics to assess scale fit"
+    ],
+    "red_flags": [
+      "Chief of Staff can be a vague, support-heavy role—risk of underutilizing his director/P&L experience",
+      "Sensay's positioning unclear: is this a startup, scale-up, or established player? May not match enterprise operational complexity he's led",
+      "AI-focused product is speculative career move away from proven FinTech/SaaS/Ops verticals"
+    ],
+    "id": "a889f3c962f2",
+    "status": "new",
+    "notes": "",
+    "interviews": [],
+    "added_at": "2026-06-24T22:16:25.499310+00:00",
+    "last_updated": "2026-06-24T22:16:25.499312+00:00",
+    "initial_status": null
+  }
+}
