@@ -372,5 +372,219 @@
     "added_at": "2026-06-24T22:26:24.557372+00:00",
     "last_updated": "2026-06-24T22:26:24.557373+00:00",
     "initial_status": null
+  },
+  "253308bdf31e": {
+    "company": "Revolut",
+    "title": "Operations Manager (Product)",
+    "location": "Remote, Spain",
+    "url": "https://www.glassdoor.es/job-listing/operations-manager-product-revolut-JV_KO0,26_KE27,34.htm?jl=1009657813795",
+    "posted": "Recent (verify date)",
+    "description": "Create scalable solutions for global fintech growth. Develop strategy for fintech verticals, track competitive position, help launch new verticals. Requires 3+ years in strategy consulting/investment banking or fast-growing tech.",
+    "source": "Glassdoor España",
+    "fit_score": 5,
+    "location_ok": true,
+    "score_reason": "Aaron has strong operational and business development credentials with proven fintech exposure (PayPal), but lacks the explicit strategy consulting or investment banking background the role prioritizes. His seniority and remote location are perfect; the gap is primarily in consulting-specific methodology and strategic framework experience.",
+    "ai_opener": "With 25+ years building scalable operations across fintech, SaaS, and international tech—including 900% quota achievement at PayPal Merchant Solutions—I've developed the strategic rigor and commercial execution mindset needed to architect fintech vertical growth.",
+    "match_perfect": [
+      "Remote work from Spain (fully aligned)",
+      "FinTech industry expertise (PayPal, payments domain)",
+      "Operational excellence and process scalability at global scale",
+      "Senior-level seniority (25+ years, director-track experience)",
+      "Cross-functional strategy and execution (merchant management, BD, operations)",
+      "Proven ability to launch and optimize commercial initiatives"
+    ],
+    "match_partial": [
+      "Strategy development (strong operational strategy; weaker formal consulting framework experience)",
+      "Fast-growth tech environment (PayPal is mature; consulting/startup velocity less evident)",
+      "Competitive positioning (merchant/vertical focused; less explicit competitive intelligence work)"
+    ],
+    "match_missing": [
+      "3+ years explicit strategy consulting or investment banking background (core stated requirement)",
+      "Track record launching net-new verticals or product lines (implied by 'new verticals' language)",
+      "Formal business case/financial modeling typical of consulting roles"
+    ],
+    "red_flags": [
+      "Seniority mismatch risk: role may be mid-to-senior manager level; Aaron targets VP/Director/C-suite roles and may view this as a step down",
+      "Consulting methodology gap: If Revolut requires McKinsey/BCG-style strategic thinking, Aaron's strengths are execution and operations rather than pure strategy consulting",
+      "Title ambiguity: 'Operations Manager (Product)' is vague on whether this is truly a strategy-focused role or an operational execution role"
+    ],
+    "id": "253308bdf31e",
+    "status": "new",
+    "notes": "",
+    "interviews": [],
+    "added_at": "2026-06-24T22:53:25.052558+00:00",
+    "last_updated": "2026-06-24T22:53:25.052569+00:00",
+    "initial_status": null
+  },
+  "c29dcfe68aea": {
+    "company": "Pleo",
+    "title": "GTM Operations Manager",
+    "location": "Remote, Europe",
+    "url": "https://euremotejobs.com/job/gtm-operations-manager/",
+    "posted": "Recent (verify date)",
+    "description": "Join GTM Strategy & Programs team focusing on revenue retention and customer success. Work at intersection of GTM strategy, revenue operations, and technology. B2B FinTech spend management platform. 5-10 years RevOps/GTM experience required.",
+    "source": "EU Remote Jobs",
+    "fit_score": 6,
+    "location_ok": true,
+    "score_reason": "Strong operational and revenue management background with proven GTM impact, but significantly over-qualified in seniority (VP/C-suite vs. manager level) and experience depth (25+ years vs. 5-10 required). Remote from Spain is fully compatible.",
+    "ai_opener": "With 25+ years driving operational excellence and revenue growth across FinTech and SaaS—including 900% quota attainment and 150% business growth through GTM transformation—I'm seeking a focused GTM Operations Manager role where strategic impact and execution precision matter more than title.",
+    "match_perfect": [
+      "Remote-only arrangement workable from Spain",
+      "FinTech industry expertise (PayPal, merchant operations, payments)",
+      "Revenue operations and GTM strategy experience",
+      "B2B SaaS operational mindset",
+      "Process optimisation and workflow design (70+ activations/month demonstrates this)",
+      "Multi-stakeholder management and complex problem-solving"
+    ],
+    "match_partial": [
+      "RevOps depth: primarily merchant/customer success operations vs. traditional RevOps (forecasting, pipeline, systems)",
+      "5-10 year requirement: candidate has 25+ years but recent GTM/RevOps-specific tenure is ~1 year (PayPal)",
+      "GTM technology stack: no mention of Salesforce, HubSpot, revenue intelligence tools, or RevOps platforms"
+    ],
+    "match_missing": [
+      "Formal RevOps or GTM systems expertise (Salesforce, Tableau, Clari, Gong, etc.)",
+      "Sales forecasting and pipeline management at scale",
+      "Dedicated GTM strategy background vs. operational execution"
+    ],
+    "red_flags": [
+      "Significant seniority mismatch: candidate is VP/Director/COO-track; this is manager-level—risk of quick boredom or external recruiter pressure",
+      "Recent role (May 2024–present) is merchant operations, not traditional RevOps—hiring manager may question fit if they need someone with Salesforce/BI tool expertise",
+      "No explicit mention of go-to-market strategy ownership, only execution; Pleo may want strategic GTM design capability",
+      "Profile emphasizes C-suite aspiration and senior roles; may signal short tenure expectations"
+    ],
+    "id": "c29dcfe68aea",
+    "status": "new",
+    "notes": "",
+    "interviews": [],
+    "added_at": "2026-06-24T22:53:25.052582+00:00",
+    "last_updated": "2026-06-24T22:53:25.052584+00:00",
+    "initial_status": null
+  },
+  "32b27ceba9c9": {
+    "company": "Remote.com",
+    "title": "Senior Manager, GTM Operational Excellence",
+    "location": "Remote, EMEA preferred",
+    "url": "https://remote.com/openings/7771355003",
+    "posted": "Recent (verify date)",
+    "description": "Architect and lead GTM operations, AI-integrated strategy. Lead team focused on operational ceiling: root causes of friction, enterprise-grade fixes. Deep BizOps/RevOps experience in fast-growing SaaS required.",
+    "source": "Remote.com Careers",
+    "fit_score": 7,
+    "location_ok": true,
+    "score_reason": "Strong operational excellence and BizOps background with proven GTM leadership at scale, but lacks explicit RevOps title and AI-integrated strategy depth. Remote EMEA role aligns perfectly with candidate constraints.",
+    "ai_opener": "With 25+ years driving operational transformation across 500-person tech orgs and 900% quota attainment managing EMEA merchant operations, I've built the GTM infrastructure that removes friction and unlocks growth—now ready to architect that same operational excellence at scale.",
+    "match_perfect": [
+      "Remote-only work arrangement from Spain",
+      "Senior Manager seniority level (25+ years experience)",
+      "BizOps expertise (governance, process redesign, operational excellence)",
+      "Fast-growing SaaS exposure (PayPal, technology sector)",
+      "Enterprise-grade operational problem-solving (TTI Telecom 500-person org)",
+      "EMEA region familiarity and leadership",
+      "GTM focus (merchant operations, business development, sales strategy)"
+    ],
+    "match_partial": [
+      "RevOps experience (merchant/customer operations proven; formal RevOps title absent)",
+      "AI-integrated strategy (no explicit AI tools/initiatives mentioned in profile)",
+      "Team leadership (managed individual contributors and networks; scale of direct reports for this role unclear)"
+    ],
+    "match_missing": [
+      "Explicit RevOps or GTM Ops title (background is BizOps + merchant ops, not traditional revenue operations)",
+      "SaaS product/pricing/packaging strategy (merchant solutions ≠ SaaS GTM motion)",
+      "Demonstrated AI implementation or modern martech/stack optimization"
+    ],
+    "red_flags": [
+      "No mention of modern RevOps tools (Salesforce, HubSpot, Gong, Outreach, etc.) or tech stack fluency",
+      "Career trajectory shows tactical operations/compliance focus; GTM strategic architecture experience not explicitly stated",
+      "PayPal/ResultsCX role is only 6 months old—may signal either perfect-fit search or potential flight risk if role misaligned"
+    ],
+    "id": "32b27ceba9c9",
+    "status": "new",
+    "notes": "",
+    "interviews": [],
+    "added_at": "2026-06-24T22:53:25.052595+00:00",
+    "last_updated": "2026-06-24T22:53:25.052597+00:00",
+    "initial_status": null
+  },
+  "cae15187d928": {
+    "company": "Vanta",
+    "title": "Head of GTM Operations & Strategy",
+    "location": "Remote, Worldwide",
+    "url": "https://www.remocate.app/jobs/head-of-gtm-operations-strategy",
+    "posted": "Recent (verify date)",
+    "description": "Own day-to-day Salesforce administration and optimization. Design scalable configurations aligned with GTM workflows. B2B SaaS security compliance platform. Remote-first across 60+ countries.",
+    "source": "Remocate",
+    "fit_score": 5,
+    "location_ok": true,
+    "score_reason": "Aaron has strong operational excellence and process optimization credentials across large organizations, but this role is primarily a Salesforce administration/optimization function—a tactical systems role rather than strategic leadership. The seniority and scope mismatch is significant; this reads as an individual contributor/specialist position, not a Director/VP-level strategic operations role he targets.",
+    "ai_opener": "With 25+ years driving operational transformation across enterprise tech organizations—from TTI Telecom's 500-person international ops to PayPal's EMEA merchant network—I've built scalable GTM systems that align sales, revenue, and compliance workflows; I'm drawn to Vanta's mission to automate trust and would bring strategic process design alongside hands-on Salesforce excellence.",
+    "match_perfect": [
+      "Remote-first arrangement (Spain-based, no relocation)",
+      "SaaS/B2B software industry experience (PayPal, TTI Telecom)",
+      "Process optimization and workflow design at scale",
+      "Experience managing complex multi-stakeholder operations across geographies"
+    ],
+    "match_partial": [
+      "Salesforce expertise implied via revenue ops background, but no explicit Salesforce admin/configuration credential mentioned",
+      "GTM strategy exposure through merchant operations and BD roles, but not as primary function",
+      "Scaling operations—candidate has done it, but typically at organizational level, not systems-level"
+    ],
+    "match_missing": [
+      "Hands-on Salesforce administration, configuration, or customization experience (core job duty)",
+      "Prior Salesforce certifications or deep technical platform expertise",
+      "GTM operations as primary focus (candidate's strength is broader org ops and revenue growth, not CRM optimization)"
+    ],
+    "red_flags": [
+      "Role appears to be individual contributor / specialist level; candidate is seeking Director/VP/C-suite—significant seniority mismatch",
+      "Job title 'Head of GTM Operations' but description is primarily Salesforce admin—unclear if strategic or tactical; could lead to frustration",
+      "No evidence in profile of Salesforce expertise; if this is a mandatory skill, Aaron would need to demonstrate or learn on the job",
+      "Candidate's 25+ year track record suggests overqualification for day-to-day Salesforce administration; retention risk if role is too junior"
+    ],
+    "id": "cae15187d928",
+    "status": "new",
+    "notes": "",
+    "interviews": [],
+    "added_at": "2026-06-24T22:53:25.052606+00:00",
+    "last_updated": "2026-06-24T22:53:25.052609+00:00",
+    "initial_status": null
+  },
+  "356c03ee941d": {
+    "company": "Signifyd",
+    "title": "Senior Revenue Operations Manager",
+    "location": "Remote, US/EMEA",
+    "url": "https://builtin.com/jobs/remote/operations/search/revenue-operations-manager",
+    "posted": "Recent (verify date)",
+    "description": "Manage operations for Customer Success and Solution Design teams, focusing on strategy, systems, analytics. FinTech/ML/Payments company. $110K-$140K annually. Verify Spain eligibility.",
+    "source": "Built In",
+    "fit_score": 7,
+    "location_ok": true,
+    "score_reason": "Strong operational and revenue management background with direct PayPal/payments experience and proven ability to scale teams and systems. Seniority level exceeds role expectations, but FinTech/payments domain expertise and remote-from-Spain eligibility create solid fit.",
+    "ai_opener": "With 25+ years scaling operations across FinTech and payments platforms—including 900% quota attainment managing 200+ merchants at PayPal—I'm ready to drive Revenue Operations strategy at Signifyd while leveraging deep expertise in CS and solution design optimization.",
+    "match_perfect": [
+      "FinTech/Payments industry domain expertise (PayPal, merchant solutions, payment processing workflows)",
+      "Revenue Operations & Customer Success operations background",
+      "Remote-first, Spain-based (no relocation required)",
+      "Proven ability to manage operations, systems, and analytics across multi-region teams",
+      "Merchant/customer lifecycle management and activation experience"
+    ],
+    "match_partial": [
+      "Seniority: Candidate targets Director/VP/C-suite; role is Senior Manager (overqualified but not disqualifying)",
+      "Solution Design team exposure: Candidate has CS operations focus; solution design is secondary emphasis in role",
+      "Analytics-driven operations: Strong in process optimization; specific analytics stack/tools not detailed in profile"
+    ],
+    "match_missing": [
+      "Explicit SaaS B2B software operations experience (payments/merchant-focused vs. traditional SaaS metrics)",
+      "Direct revenue operations metric ownership (ARR, MRR, expansion, churn tracking not prominently featured)"
+    ],
+    "red_flags": [
+      "Overqualified: 25+ years experience and C-suite target for Senior Manager role may indicate flight risk or expectation mismatch",
+      "Salary band ($110K–$140K) may be below candidate's historical compensation at PayPal; clarify before engagement",
+      "Spain eligibility verification required—confirm Signifyd's payroll/tax setup supports Spain-based remote employee"
+    ],
+    "id": "356c03ee941d",
+    "status": "new",
+    "notes": "",
+    "interviews": [],
+    "added_at": "2026-06-24T22:53:25.052617+00:00",
+    "last_updated": "2026-06-24T22:53:25.052619+00:00",
+    "initial_status": null
   }
 }
