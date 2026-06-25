@@ -1,4 +1,3 @@
-
 [
   {
     "company": "Revolut",
@@ -586,6 +585,131 @@
     "interviews": [],
     "added_at": "2026-06-24T22:53:25.052617+00:00",
     "last_updated": "2026-06-24T22:53:25.052619+00:00",
+    "initial_status": null
+  },
+  {
+    "company": "Fonoa Technologies",
+    "title": "Revenue Operations Manager",
+    "location": "Remote, Europe",
+    "url": "https://startup.jobs/revenue-operations-manager-remote-europe-fonoa_hq-2951943",
+    "posted": "Recent",
+    "description": "Build and lead Revenue Operations team in a fast-growing company. Experience with B2B SaaS products, HubSpot, Zendesk, JIRA required. Work with C-Suite and VP-level contacts. FinTech company automating taxes for marketplaces, platforms, SaaS, and e-commerce globally.",
+    "source": "Startup.jobs",
+    "fit_score": 7,
+    "location_ok": true,
+    "score_reason": "Strong strategic and operational fit with proven RevOps-adjacent experience in B2B merchant/customer operations, FinTech domain expertise, and remote-first setup. Minor gap: no explicit HubSpot/Zendesk/JIRA hands-on experience, and seniority may exceed role expectations (candidate targets Director/VP; role appears mid-management).",
+    "ai_opener": "With 25+ years scaling operations in FinTech and SaaS\u2014including 900% quota attainment and 70+ monthly merchant activations at PayPal\u2014I'm excited to build Revenue Operations infrastructure that drives predictable, scalable growth for Fonoa.",
+    "match_perfect": [
+      "B2B SaaS product knowledge and merchant/customer lifecycle operations",
+      "FinTech domain expertise (PayPal, payment processing, compliance)",
+      "Remote-first work from Spain with no travel requirements",
+      "C-suite and VP-level stakeholder management experience",
+      "Process optimisation, workflow redesign, and operational scaling",
+      "International EMEA operations at scale"
+    ],
+    "match_partial": [
+      "RevOps role (experience is customer success/merchant ops\u2014adjacent but not pure RevOps)",
+      "Team leadership (proven with 30\u201340 direct reports; unclear if role requires team-building immediately)",
+      "CRM/workflow tools (strong process design; no named experience with HubSpot, Zendesk, JIRA)"
+    ],
+    "match_missing": [
+      "Hands-on HubSpot, Zendesk, JIRA administration/configuration experience",
+      "Explicit Sales Operations or Revenue Operations title/role (background is success/merchant ops)"
+    ],
+    "red_flags": [
+      "Seniority mismatch: candidate targets Director/VP/C-suite; role title suggests mid-management (clarify growth trajectory)",
+      "No demonstrated CRM/ticketing platform hands-on experience\u2014may require ramp on tools",
+      "Current role at PayPal started May 2024 (recent); hiring manager may question short tenure if asked"
+    ],
+    "id": "9060bda433c4",
+    "status": "new",
+    "notes": "",
+    "interviews": [],
+    "added_at": "2026-06-25T10:18:55.766877+00:00",
+    "last_updated": "2026-06-25T10:18:55.766888+00:00",
+    "initial_status": null
+  },
+  {
+    "company": "Monzo",
+    "title": "Chief of Staff, Design",
+    "location": "Remote, UK/Europe",
+    "url": "https://uk.indeed.com/q-remote-chief-of-staff-jobs.html",
+    "posted": "Active",
+    "description": "Partner with Chief Design Officer to drive impact across Design team (Brand Design, Product Design, User Research). Create efficient processes, complex programme management, and craft clear narratives. FinTech digital bank. \u00a31,000 learning budget, full remote setup provided.",
+    "source": "Indeed UK",
+    "fit_score": 4,
+    "location_ok": true,
+    "score_reason": "Aaron has deep operational excellence and business transformation experience at senior levels, but this Chief of Staff role is fundamentally a design operations/support function\u2014a step down in scope and strategic ownership from his target C-suite trajectory. The role lacks P&L responsibility, merchant/revenue focus, and operational scale he's built.",
+    "ai_opener": "With 25+ years driving operational transformation, process excellence, and organisational scaling across FinTech and SaaS, I'm drawn to Monzo's mission\u2014but I want to ensure a Chief of Staff, Design role aligns with your appetite for someone who typically owns end-to-end business operations and revenue impact.",
+    "match_perfect": [
+      "Remote-first, Spain-based role fully accommodates location requirements",
+      "FinTech industry alignment (Monzo digital bank sector match)",
+      "Process optimisation and programme management expertise",
+      "Proven ability to create efficiency and governance at scale"
+    ],
+    "match_partial": [
+      "Seniority level: C-suite equivalent background, but role is Director-level staff support rather than independent P&L leadership",
+      "Narrative and communication skills demonstrated in consulting/lecturer roles, but not primary career focus",
+      "Cross-functional stakeholder management, though mostly ops/sales-facing rather than creative/design teams"
+    ],
+    "match_missing": [
+      "Design operations or creative function experience (no brand, product design, or UX operations background)",
+      "Storytelling/narrative crafting for design or brand audiences (not evidenced in profile)",
+      "Direct people leadership of creative/design teams (only led sales, ops, and technical teams)",
+      "Design-adjacent tools, processes, or methodologies (no Figma, design systems, brand governance experience mentioned)"
+    ],
+    "red_flags": [
+      "Role is structurally a Chief of Staff support function, not independent strategic leadership\u2014misaligned with his stated VP/C-suite target and 25+ years seniority",
+      "Design operations/design thinking experience absent; this feels like a lateral move into unfamiliar functional domain",
+      "\u00a31,000 learning budget suggests early-stage or junior-focused onboarding\u2014inconsistent with his executive profile"
+    ],
+    "id": "4d5ddd036ac7",
+    "status": "new",
+    "notes": "",
+    "interviews": [],
+    "added_at": "2026-06-25T10:18:55.766899+00:00",
+    "last_updated": "2026-06-25T10:18:55.766901+00:00",
+    "initial_status": null
+  },
+  {
+    "company": "OneVest",
+    "title": "Revenue Operations Manager",
+    "location": "Remote, North America/Europe",
+    "url": "https://remotive.com/remote/jobs/sales-business/revenue-operations-manager-4346402",
+    "posted": "Active",
+    "description": "Design and optimize 'Lead-to-Revenue' process for SMB and Enterprise B2B sales cycles. Build forecasting models, identify automation opportunities with AI-driven solutions. 8+ years experience in high-growth SaaS or FinTech required. Reports to Sr. Director of Operations.",
+    "source": "Remotive",
+    "fit_score": 7,
+    "location_ok": true,
+    "score_reason": "Strong operational and revenue leadership background with direct PayPal/merchant experience and proven process optimization skills; however, candidate's seniority (Director/VP/C-suite level) may exceed this Manager-level role, and current focus is on senior positions rather than individual contributor paths.",
+    "ai_opener": "With 25+ years driving operational excellence and 900% quota attainment managing 200+ EMEA merchants at PayPal, I'm ready to design and optimize Lead-to-Revenue processes at scale.",
+    "match_perfect": [
+      "Remote work from Spain with no travel requirements",
+      "PayPal/FinTech and B2B SaaS domain expertise",
+      "Lead-to-Revenue process design and merchant/customer lifecycle optimization",
+      "Forecasting, process improvement, and workflow automation experience",
+      "High-growth environment operational maturity"
+    ],
+    "match_partial": [
+      "8+ years SaaS/FinTech requirement (25+ years total, but not all in SaaS high-growth contexts)",
+      "Manager-level role (candidate targets Director/VP \u2014 overqualified on paper but has individual contributor revenue ops experience)"
+    ],
+    "match_missing": [
+      "AI-driven solution design (no explicit background in AI/ML tooling mentioned)",
+      "Specific forecasting model development or revenue analytics platform expertise"
+    ],
+    "red_flags": [
+      "Seniority mismatch: candidate explicitly targets Director/VP/C-suite; this Manager role may feel like a step back and carry retention risk",
+      "Role appears to be hands-on individual contributor; candidate's background is executive leadership and team management",
+      "No demonstrated experience building AI-driven forecasting or automation solutions \u2014 job emphasizes AI",
+      "Compensation alignment unclear: VP-track candidate may expect higher base/title than Manager band"
+    ],
+    "id": "3699fe919e2c",
+    "status": "new",
+    "notes": "",
+    "interviews": [],
+    "added_at": "2026-06-25T10:18:55.766909+00:00",
+    "last_updated": "2026-06-25T10:18:55.766910+00:00",
     "initial_status": null
   }
 ]
