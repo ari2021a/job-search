@@ -304,7 +304,7 @@ MBA Finance & Banking | B.Sc. Industrial Engineering | Lean Six Sigma Yellow Bel
 let jobs={}, filter='all', searchQ='', apiKey=localStorage.getItem('anthropic_key')||'', pendingDeleteId=null;
 
 async function init(){
-  try{const r=await fetch('scored_jobs.json');if(r.ok){const arr=await r.json();arr.forEach(j=>{if(j.id&&!jobs[j.id])jobs[j.id]=j;});}}catch(e){}
+  try{const r=await fetch('https://raw.githubusercontent.com/ari2021a/job-search/main/docs/scored_jobs.json?t='+Date.now());if(r.ok){const arr=await r.json();arr.forEach(j=>{if(j.id&&!jobs[j.id])jobs[j.id]=j;});}}catch(e){}
   const s=localStorage.getItem('jobs_state');if(s){try{Object.assign(jobs,JSON.parse(s));}catch(e){}}
   if(!apiKey)promptApiKey();
   renderJobs();updateStats();
